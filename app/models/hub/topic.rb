@@ -4,7 +4,7 @@ module Hub
     include Hub::SoftDelete
 
     belongs_to :customer
-    has_many :images, foreign_key: :hubs_topic_id, class_name: HubsEngine::TopicImage
+    has_many :images, foreign_key: :hubs_topic_id, class_name: Hub::TopicImage
     has_many :replies, foreign_key: :hubs_topic_id
     has_many :likers, foreign_key: :hubs_topic_id
 

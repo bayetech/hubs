@@ -14,14 +14,14 @@ module Hub
       has_many :following, through: :active_relationships,  source: :followed_customer
       has_many :followers, through: :passive_relationships, source: :follower_customer
 
-      has_many :replies, class_name: HubsEngine::Reply, foreign_key: :customer_id
-      has_many :reply_to_replies, class_name: HubsEngine::Reply, foreign_key: :reply_to_customer_id
-      has_many :likers, class_name: HubsEngine::Liker, dependent: :destroy
+      has_many :replies, class_name: Hub::Reply, foreign_key: :customer_id
+      has_many :reply_to_replies, class_name: Hub::Reply, foreign_key: :reply_to_customer_id
+      has_many :likers, class_name: Hub::Liker, dependent: :destroy
 
-      has_many :follower_notifications, class_name: HubsEngine::FollowerNotification, foreign_key: :to_customer_id
-      has_many :liker_notifications, class_name: HubsEngine::LikerNotification, foreign_key: :to_customer_id
-      has_many :notifications, class_name: HubsEngine::Notification, foreign_key: :to_customer_id
-      has_many :reply_notifications, class_name: HubsEngine::ReplyNotification, foreign_key: :to_customer_id
+      has_many :follower_notifications, class_name: Hub::FollowerNotification, foreign_key: :to_customer_id
+      has_many :liker_notifications, class_name: Hub::LikerNotification, foreign_key: :to_customer_id
+      has_many :notifications, class_name: Hub::Notification, foreign_key: :to_customer_id
+      has_many :reply_notifications, class_name: Hub::ReplyNotification, foreign_key: :to_customer_id
     end
 
     def unread_notification_count
@@ -29,7 +29,7 @@ module Hub
     end
 
     def feed
-      HubsEngine::Topic.where(customer: self).or(HubsEngine::Topic.where(customer: following)).page_includes.recent
+      Hub::Topic.where(customer: self).or(Hub::Topic.where(customer: following)).page_includes.recent
     end
 
     def follow(other_user)
@@ -49,7 +49,7 @@ module Hub
     end
 
     def my_participant_topics
-      HubsEngine::Topic.joins('left join hub_replies on hub_replies.hubs_topic_id = hub_topics.id')
+      Hub::Topic.joins('left join hub_replies on hub_replies.hubs_topic_id = hub_topics.id')
                        .joins('left join hub_likers on hub_likers.hubs_topic_id = hub_topics.id')
                        .where('hub_replies.customer_id = ? or hub_likers.customer_id = ?', id, id)
                        .group('hub_topics.id')
