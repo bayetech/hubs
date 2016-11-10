@@ -1,7 +1,7 @@
 module HubsEngine
   class Reply < ActiveRecord::Base
     include Baye::Uid
-    include Hubs::SoftDelete
+    include HubsEngine::SoftDelete
 
     belongs_to :customer
     belongs_to :topic, foreign_key: :hubs_topic_id
