@@ -49,10 +49,10 @@ module HubsEngine
     end
 
     def my_participant_topics
-      HubsEngine::Topic.joins('left join hubs_replies on hubs_replies.hubs_topic_id = hubs_topics.id')
-                 .joins('left join hubs_likers on hubs_likers.hubs_topic_id = hubs_topics.id')
-                 .where('hubs_replies.customer_id = ? or hubs_likers.customer_id = ?', id, id)
-                 .group('hubs_topics.id')
+      HubsEngine::Topic.joins('left join hubs_engine_replies on hubs_engine_replies.hubs_topic_id = hubs_engine_topics.id')
+                       .joins('left join hubs_engine_likers on hubs_engine_likers.hubs_topic_id = hubs_engine_topics.id')
+                       .where('hubs_engine_replies.customer_id = ? or hubs_engine_likers.customer_id = ?', id, id)
+                       .group('hubs_engine_topics.id')
     end
 
     def like(topic)
