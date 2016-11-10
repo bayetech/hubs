@@ -1,6 +1,5 @@
-module Hubs
+module HubsEngine
   class Liker < ActiveRecord::Base
-    self.table_name = 'hubs_likers'
     include Baye::Uid
     belongs_to :customer
     belongs_to :topic, foreign_key: :hubs_topic_id, counter_cache: true

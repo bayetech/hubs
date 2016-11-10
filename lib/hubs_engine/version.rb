@@ -1,3 +1,3 @@
-module Hubs
+module HubsEngine
   VERSION = '0.0.1'
 end

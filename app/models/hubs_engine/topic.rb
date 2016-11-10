@@ -1,11 +1,10 @@
-module Hubs
+module HubsEngine
   class Topic < ActiveRecord::Base
-    self.table_name = 'hubs_topics'
     include Baye::Uid
     include Hubs::SoftDelete
 
     belongs_to :customer
-    has_many :images, foreign_key: :hubs_topic_id, class_name: Hubs::TopicImage
+    has_many :images, foreign_key: :hubs_topic_id, class_name: HubsEngine::TopicImage
     has_many :replies, foreign_key: :hubs_topic_id
     has_many :likers, foreign_key: :hubs_topic_id
 

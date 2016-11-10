@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'hubs/version'
+require 'hubs_engine/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'hubs'
-  spec.version       = Hubs::VERSION
+  spec.version       = HubsEngine::VERSION
   spec.authors       = ['Eric Guo']
   spec.email         = ['eric.guocz@gmail.com']
 

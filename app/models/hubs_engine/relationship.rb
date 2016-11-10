@@ -1,6 +1,5 @@
-module Hubs
+module HubsEngine
   class Relationship < ActiveRecord::Base
-    self.table_name = 'hubs_relationships'
     belongs_to :follower_customer, class_name: Customer
     belongs_to :followed_customer, class_name: Customer
 

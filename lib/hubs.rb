@@ -1,4 +1,4 @@
-require 'hubs/version'
+require 'hubs_engine/version'
 
 module HubsEngine
   class Engine < ::Rails::Engine

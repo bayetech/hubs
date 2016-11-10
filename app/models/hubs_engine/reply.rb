@@ -1,6 +1,5 @@
-module Hubs
+module HubsEngine
   class Reply < ActiveRecord::Base
-    self.table_name = 'hubs_replies'
     include Baye::Uid
     include Hubs::SoftDelete
 
