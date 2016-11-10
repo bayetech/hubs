@@ -1,5 +1,8 @@
 require 'hubs/version'
 
 module Hubs
-  # Your code goes here...
+  class Engine < ::Rails::Engine
+    engine_name 'hubs'
+    isolate_namespace Hubs
+  end
 end
