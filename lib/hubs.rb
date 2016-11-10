@@ -1,4 +1,4 @@
-require "hubs/version"
+require 'hubs/version'
 
 module Hubs
   # Your code goes here...
