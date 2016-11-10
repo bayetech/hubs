@@ -1,4 +1,4 @@
-module HubsEngine
+module Hub
   class TopicImage < ActiveRecord::Base
     belongs_to :topic, foreign_key: :hubs_topic_id
 

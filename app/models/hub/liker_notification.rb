@@ -1,4 +1,4 @@
-module HubsEngine
+module Hub
   class LikerNotification < ActiveRecord::Base
     belongs_to :liker, foreign_key: :hubs_liker_id
     belongs_to :topic, foreign_key: :hubs_topic_id

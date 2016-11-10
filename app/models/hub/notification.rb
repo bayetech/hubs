@@ -1,4 +1,4 @@
-module HubsEngine
+module Hub
   class Notification < ActiveRecord::Base
     belongs_to :to_customer, class_name: Customer, counter_cache: true
     belongs_to :actor_customer, class_name: Customer

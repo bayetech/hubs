@@ -1,8 +1,8 @@
-require 'hubs_engine/version'
+require 'hub/version'
 
-module HubsEngine
+module Hub
   class Engine < ::Rails::Engine
-    engine_name 'hubs'
-    isolate_namespace HubsEngine
+    engine_name 'hub'
+    isolate_namespace Hub
   end
 end

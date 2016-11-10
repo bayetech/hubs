@@ -1,4 +1,4 @@
-module HubsEngine
+module Hub
   module SoftDelete
     extend ActiveSupport::Concern
 

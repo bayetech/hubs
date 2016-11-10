@@ -1,4 +1,4 @@
-module HubsEngine
+module Hub
   module UserRelation
     extend ActiveSupport::Concern
 
@@ -49,10 +49,10 @@ module HubsEngine
     end
 
     def my_participant_topics
-      HubsEngine::Topic.joins('left join hubs_engine_replies on hubs_engine_replies.hubs_topic_id = hubs_engine_topics.id')
-                       .joins('left join hubs_engine_likers on hubs_engine_likers.hubs_topic_id = hubs_engine_topics.id')
-                       .where('hubs_engine_replies.customer_id = ? or hubs_engine_likers.customer_id = ?', id, id)
-                       .group('hubs_engine_topics.id')
+      HubsEngine::Topic.joins('left join hub_replies on hub_replies.hubs_topic_id = hub_topics.id')
+                       .joins('left join hub_likers on hub_likers.hubs_topic_id = hub_topics.id')
+                       .where('hub_replies.customer_id = ? or hub_likers.customer_id = ?', id, id)
+                       .group('hub_topics.id')
     end
 
     def like(topic)

@@ -1,4 +1,4 @@
-module HubsEngine
+module Hub
   class Liker < ActiveRecord::Base
     include Baye::Uid
     belongs_to :customer

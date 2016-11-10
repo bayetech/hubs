@@ -1,4 +1,4 @@
-module HubsEngine
+module Hub
   class ReplyNotification < ActiveRecord::Base
     belongs_to :reply, foreign_key: :hubs_reply_id
     belongs_to :topic, foreign_key: :hubs_topic_id

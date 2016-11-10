@@ -1,4 +1,4 @@
-module HubsEngine
+module Hub
   class FollowerNotification < ActiveRecord::Base
     belongs_to :relationship, foreign_key: :hubs_relationship_id
     belongs_to :to_customer, class_name: Customer, counter_cache: true
