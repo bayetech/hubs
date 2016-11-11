@@ -7,19 +7,19 @@ module Hub
   end
 
   if defined? Grape
-    require_relative '../app/models/concerns/hubs/user_relation'
-    require_relative '../app/models/concerns/hubs/soft_delete'
+    require_relative '../app/models/concerns/hub/user_relation'
+    require_relative '../app/models/concerns/hub/soft_delete'
 
     cf = File.dirname(__FILE__)
 
-    autoload(:Liker, File.expand_path('../app/models/hubs/liker.rb', cf))
-    autoload(:Notification, File.expand_path('../app/models/hubs/notification.rb', cf))
-    autoload(:LikerNotification, File.expand_path('../app/models/hubs/liker_notification.rb', cf))
-    autoload(:Relationship, File.expand_path('../app/models/hubs/relationship.rb', cf))
-    autoload(:FollowerNotification, File.expand_path('../app/models/hubs/follower_notification.rb', cf))
-    autoload(:Reply, File.expand_path('../app/models/hubs/reply.rb', cf))
-    autoload(:ReplyNotification, File.expand_path('../app/models/hubs/reply_notification.rb', cf))
-    autoload(:Topic, File.expand_path('../app/models/hubs/topic.rb', cf))
-    autoload(:TopicImage, File.expand_path('../app/models/hubs/topic_image.rb', cf))
+    autoload(:Liker, File.expand_path('../app/models/hub/liker.rb', cf))
+    autoload(:Notification, File.expand_path('../app/models/hub/notification.rb', cf))
+    autoload(:LikerNotification, File.expand_path('../app/models/hub/liker_notification.rb', cf))
+    autoload(:Relationship, File.expand_path('../app/models/hub/relationship.rb', cf))
+    autoload(:FollowerNotification, File.expand_path('../app/models/hub/follower_notification.rb', cf))
+    autoload(:Reply, File.expand_path('../app/models/hub/reply.rb', cf))
+    autoload(:ReplyNotification, File.expand_path('../app/models/hub/reply_notification.rb', cf))
+    autoload(:Topic, File.expand_path('../app/models/hub/topic.rb', cf))
+    autoload(:TopicImage, File.expand_path('../app/models/hub/topic_image.rb', cf))
   end
 end
