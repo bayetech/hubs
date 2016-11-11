@@ -7,6 +7,9 @@ module Hub
   end
 
   if defined? Grape
+    require_relative '../app/models/concerns/hubs/user_relation'
+    require_relative '../app/models/concerns/hubs/soft_delete'
+
     cf = File.dirname(__FILE__)
 
     autoload(:Liker, File.expand_path('../app/models/hubs/liker.rb', cf))
