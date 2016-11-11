@@ -50,9 +50,9 @@ module Hub
 
     def my_participant_topics
       Hub::Topic.joins('left join hub_replies on hub_replies.hubs_topic_id = hub_topics.id')
-                       .joins('left join hub_likers on hub_likers.hubs_topic_id = hub_topics.id')
-                       .where('hub_replies.customer_id = ? or hub_likers.customer_id = ?', id, id)
-                       .group('hub_topics.id')
+                .joins('left join hub_likers on hub_likers.hubs_topic_id = hub_topics.id')
+                .where('hub_replies.customer_id = ? or hub_likers.customer_id = ?', id, id)
+                .group('hub_topics.id')
     end
 
     def like(topic)
