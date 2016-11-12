@@ -1,6 +1,6 @@
 module Hub
   class Topic < ActiveRecord::Base
-    include Baye::Uid
+    include Hub::Uid
     include Hub::SoftDelete
 
     belongs_to :customer
