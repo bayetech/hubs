@@ -1,8 +1,13 @@
 # Hubs
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/hubs`. To experiment with that code, run `bin/console` for an interactive prompt.
+hubs is a WeChat moment clone gem focus mobile only, inspired from [homeland](https://github.com/rails-engine/homeland) gem a lot, but it's having more feature:
 
-TODO: Delete this and the text above, and describe your gem
+* topic category
+* post topic with image
+* topic can reply
+* user can like/unlike topic
+* user can following/unfollowing
+
 
 ## Installation
 
@@ -22,7 +27,9 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```
+rails g hub:install
+```
 
 ## Development
 
@@ -32,7 +39,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/hubs. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/bayetech/hubs. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
 ## License
