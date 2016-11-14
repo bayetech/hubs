@@ -1,3 +1,4 @@
+require 'carrierwave'
 require 'hub/version'
 
 module Hub
