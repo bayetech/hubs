@@ -1,3 +1,4 @@
+require 'autoprefixer-rails'
 require 'carrierwave'
 require 'hub/version'
 
