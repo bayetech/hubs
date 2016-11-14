@@ -1,3 +1,13 @@
+$page_backgroud: #B2B2B2;
+$topic_background: #FFFFFF;
+
+body {
+  background-color: $page_backgroud;
+  padding: 0;
+  margin: 0;
+}
+
 div.topic {
   display: flex;
+  background-color: $topic_background;
 }
