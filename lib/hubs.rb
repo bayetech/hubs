@@ -1,4 +1,5 @@
 require 'autoprefixer-rails'
+require 'normalize-scss'
 require 'carrierwave'
 require 'hub/version'
 
