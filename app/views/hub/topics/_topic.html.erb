@@ -1,3 +1,12 @@
 <div class="topic">
-  <%= image_tag topic.customer.avatar.try(:url)||'' %>
+  <div class="topic_head">
+    <%= image_tag topic.customer.avatar.try(:url)||'' %>
+    <div class="topic_head_people">
+      <p>
+        <span class="topic_head_name"><%= topic.customer.name -%></span>
+        <span class="topic_head_title"><%= topic.customer.title -%></span>
+      </p>
+      <p><%= topic.customer.company -%></p>
+    </div>
+  </div>
 </div>

@@ -9,7 +9,37 @@ body {
   margin: 0;
 }
 
+p {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+}
+
 div.topic {
   display: flex;
   background-color: $topic_background;
+  flex-direction: column;
+  padding: 0.3rem;
+}
+
+div.topic_head {
+  font-size: 0.22rem;
+  span.topic_head_name {
+    font-size: 0.26rem;
+  }
+  span.topic_head_title {
+    left: 0.9rem;
+  }
+  img {
+    vertical-align: top;
+    width: 0.745rem;
+    height: 0.745rem;
+    border-radius: 50%;
+  }
+  div.topic_head_people {
+    display: inline-block;
+    margin: 0 10px;
+    p {
+      height: 0.45rem;
+    }
+  }
 }
