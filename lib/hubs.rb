@@ -12,6 +12,7 @@ module Hub
     require_relative '../app/models/concerns/hub/uid'
     require_relative '../app/models/concerns/hub/user_relation'
 
+    require_relative '../app/uploaders/hub/base_uploader'
     require_relative '../app/uploaders/hub/topic_image_uploader'
 
     cf = File.dirname(__FILE__)
