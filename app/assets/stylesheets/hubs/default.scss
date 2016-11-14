@@ -43,5 +43,16 @@ div.topic_head {
 
 div.topic_title {
   font-size: 32rem;
-  flex-wrap: wrap;
+  padding: 10rem;
+}
+
+div.topic_image_1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 670rem;
+  img {
+    width: 100%;
+    border-radius: 14rem;
+  }
 }

@@ -12,5 +12,7 @@
   <div class="topic_title">
     <p><%= topic.title -%></p>
   </div>
-
+  <div class="topic_image_1">
+    <%= image_tag topic.images.first.image.url(thumb: '@!t1') unless topic.images.blank? %>
+  </div>
 </div>
