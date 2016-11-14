@@ -1,5 +1,5 @@
 module Hub
-  class TopicImageUploader < BaseUploader
+  class TopicImageUploader < Hub::BaseUploader
     def store_dir
       't/'
     end
