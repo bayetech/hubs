@@ -8,8 +8,9 @@ module Hub
   end
 
   if defined? Grape
-    require_relative '../app/models/concerns/hub/user_relation'
     require_relative '../app/models/concerns/hub/soft_delete'
+    require_relative '../app/models/concerns/hub/uid'
+    require_relative '../app/models/concerns/hub/user_relation'
 
     cf = File.dirname(__FILE__)
 
