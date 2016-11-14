@@ -16,9 +16,11 @@ p {
 
 div.topic {
   display: flex;
+  flex: none;
   background-color: $topic_background;
   flex-direction: column;
   padding: 40rem;
+  border: 1px solid #B2B2B2;
 }
 
 div.topic_head {
@@ -47,12 +49,21 @@ div.topic_title {
 }
 
 div.topic_image_1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 670rem;
   img {
     width: 100%;
+    border-radius: 14rem;
+  }
+}
+
+div.topic_image_4 {
+  display: flex;
+  flex: 0 1 670rem;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  img {
+    width: 316rem;
+    height: 316rem;
     border-radius: 14rem;
   }
 }

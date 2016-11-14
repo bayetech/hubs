@@ -12,7 +12,15 @@
   <div class="topic_title">
     <p><%= topic.title -%></p>
   </div>
-  <div class="topic_image_1">
-    <%= image_tag topic.images.first.image.url(thumb: '@!t1') unless topic.images.blank? %>
-  </div>
+  <% if topic.images.count > 1 -%>
+    <div class="topic_image_4">
+      <% topic.images.each do |ti| -%>
+        <%= image_tag ti.image.url(thumb: '@!t4') -%>
+      <% end %>
+    </div>
+  <% else -%>
+    <div class="topic_image_1">
+      <%= image_tag topic.images.first.image.url(thumb: '@!t1') unless topic.images.blank? %>
+    </div>
+  <% end -%>
 </div>
