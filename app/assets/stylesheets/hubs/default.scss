@@ -7,6 +7,7 @@ $head-text-color: #666;
 $title-text-color: #777;
 $light-text-color: #999;
 $praise-text-color: #172434;
+$category-text-color: #ababab;
 
 body {
   background-color: $page-backgroud;
@@ -92,6 +93,12 @@ p {
   .topic-head-people {
     display: inline-block;
     margin: 0 20rem;
+  }
+
+  .topic-category {
+    float: right;
+    margin-top: 16rem;
+    color: $category-text-color;
   }
 }
 

@@ -9,7 +9,7 @@ module Hub
     has_many :likers, foreign_key: :hubs_topic_id
 
     enum category: {
-      '巴一下' => 0, '晒好物' => 1, '茶人茶事' => 3, '新品' => 4, '茶道' => 5
+      '' => 0, '晒好物' => 1, '茶人茶事' => 3, '新品' => 4, '茶道' => 5
     }
 
     validates :customer_id, :title, presence: true
