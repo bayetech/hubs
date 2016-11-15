@@ -2,6 +2,11 @@
 
 $page-backgroud: #b2b2b2;
 $topic-background: #fff;
+$bold-text-color: #333;
+$head-text-color: #666;
+$title-text-color: #777;
+$light-text-color: #999;
+$praise-text-color: #172434;
 
 body {
   background-color: $page-backgroud;
@@ -14,6 +19,18 @@ p {
   -webkit-margin-before: 0;
 }
 
+.bold-text {
+  color: $bold-text-color;
+}
+
+.light-text {
+  color: $light-text-color;
+}
+
+.flex-large {
+  flex: 0 1 350rem;
+}
+
 .topic-container {
   background-color: $topic-background;
   border: 1px solid $page-backgroud;
@@ -24,6 +41,7 @@ p {
 }
 
 .topic-head {
+  color: $head-text-color;
   font-size: 32rem;
 
   .topic-head-name {
@@ -48,6 +66,7 @@ p {
 }
 
 .topic-title {
+  color: $title-text-color;
   font-size: 32rem;
   padding: 10rem;
 }
@@ -85,4 +104,14 @@ p {
     height: 210rem;
     width: 210rem;
   }
+}
+
+.topic-footer {
+  align-items: center;
+  color: $praise-text-color;
+  display: flex;
+  flex-flow: row wrap;
+  font-size: 40rem;
+  height: 60rem;
+  justify-content: space-between;
 }
