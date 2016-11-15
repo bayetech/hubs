@@ -19,6 +19,36 @@ p {
   -webkit-margin-before: 0;
 }
 
+.gray-reply {
+  background: image-url('hubs/gray_comment.png') no-repeat;
+  background-size: 32rem 29rem;
+  float: left;
+  height: 29rem;
+  margin-top: 17rem;
+  margin-right: 12rem;
+  width: 32rem;
+}
+
+.gray-liker {
+  background: image-url('hubs/gray_heart.png') no-repeat;
+  background-size: 32rem 29rem;
+  float: left;
+  height: 29rem;
+  margin-top: 15rem;
+  margin-right: 12rem;
+  width: 32rem;
+}
+
+.red-liker {
+  background: image-url('hubs/red_heart.png') no-repeat;
+  background-size: 32rem 29rem;
+  float: left;
+  height: 29rem;
+  margin-top: 15rem;
+  margin-right: 12rem;
+  width: 32rem;
+}
+
 .bold-text {
   color: $bold-text-color;
 }
