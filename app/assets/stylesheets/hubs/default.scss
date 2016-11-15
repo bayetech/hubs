@@ -67,3 +67,15 @@ div.topic-image-4 {
     border-radius: 14rem;
   }
 }
+
+div.topic-image-9 {
+  display: flex;
+  flex: 0 1 670rem;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  img {
+    width: 210rem;
+    height: 210rem;
+    border-radius: 14rem;
+  }
+}

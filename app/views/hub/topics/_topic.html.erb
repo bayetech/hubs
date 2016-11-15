@@ -12,7 +12,13 @@
   <div class="topic-title">
     <p><%= topic.title -%></p>
   </div>
-  <% if topic.images.count > 1 -%>
+  <% if topic.images.count > 4 -%>
+    <div class="topic-image-9">
+      <% topic.images.each do |ti| -%>
+        <%= image_tag ti.image.url(thumb: '@!t9') -%>
+      <% end %>
+    </div>
+  <% elsif topic.images.count > 1 -%>
     <div class="topic-image-4">
       <% topic.images.each do |ti| -%>
         <%= image_tag ti.image.url(thumb: '@!t4') -%>
