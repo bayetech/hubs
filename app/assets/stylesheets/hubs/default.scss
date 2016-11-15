@@ -5,77 +5,84 @@ $topic-background: #fff;
 
 body {
   background-color: $page-backgroud;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 p {
-  -webkit-margin-before: 0;
   -webkit-margin-after: 0;
+  -webkit-margin-before: 0;
 }
 
-div.topic-container {
+.topic-container {
+  background-color: $topic-background;
+  border: 1px solid $page-backgroud;
   display: flex;
   flex: none;
-  background-color: $topic-background;
   flex-direction: column;
   padding: 40rem;
-  border: 1px solid $page-backgroud;
 }
 
-div.topic-head {
+.topic-head {
   font-size: 32rem;
-  span.topic-head-name {
+
+  .topic-head-name {
     font-size: 40rem;
   }
-  span.topic-head-title {
+
+  .topic-head-title {
     left: 20rem;
   }
+
   img {
+    border-radius: 50%;
+    height: 100rem;
     vertical-align: top;
     width: 100rem;
-    height: 100rem;
-    border-radius: 50%;
   }
-  div.topic-head-people {
+
+  .topic-head-people {
     display: inline-block;
     margin: 0 20rem;
   }
 }
 
-div.topic-title {
+.topic-title {
   font-size: 32rem;
   padding: 10rem;
 }
 
-div.topic-image-1 {
+.topic-image-1 {
   width: 670rem;
+
   img {
+    border-radius: 14rem;
     width: 100%;
-    border-radius: 14rem;
   }
 }
 
-div.topic-image-4 {
+.topic-image-4 {
   display: flex;
   flex: 0 1 670rem;
   flex-flow: row wrap;
   justify-content: space-between;
+
   img {
-    width: 316rem;
+    border-radius: 14rem;
     height: 316rem;
-    border-radius: 14rem;
+    width: 316rem;
   }
 }
 
-div.topic-image-9 {
+.topic-image-9 {
   display: flex;
   flex: 0 1 670rem;
   flex-flow: row wrap;
   justify-content: space-between;
+
   img {
-    width: 210rem;
-    height: 210rem;
     border-radius: 14rem;
+    height: 210rem;
+    width: 210rem;
   }
 }
