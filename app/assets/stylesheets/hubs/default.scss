@@ -1,10 +1,10 @@
 @import 'normalize';
 
-$page_backgroud: #B2B2B2;
-$topic_background: #FFFFFF;
+$page-backgroud: #b2b2b2;
+$topic-background: #fff;
 
 body {
-  background-color: $page_backgroud;
+  background-color: $page-backgroud;
   padding: 0;
   margin: 0;
 }
@@ -14,21 +14,21 @@ p {
   -webkit-margin-after: 0;
 }
 
-div.topic {
+div.topic-container {
   display: flex;
   flex: none;
-  background-color: $topic_background;
+  background-color: $topic-background;
   flex-direction: column;
   padding: 40rem;
-  border: 1px solid #B2B2B2;
+  border: 1px solid $page-backgroud;
 }
 
-div.topic_head {
+div.topic-head {
   font-size: 32rem;
-  span.topic_head_name {
+  span.topic-head-name {
     font-size: 40rem;
   }
-  span.topic_head_title {
+  span.topic-head-title {
     left: 20rem;
   }
   img {
@@ -37,18 +37,18 @@ div.topic_head {
     height: 100rem;
     border-radius: 50%;
   }
-  div.topic_head_people {
+  div.topic-head-people {
     display: inline-block;
     margin: 0 20rem;
   }
 }
 
-div.topic_title {
+div.topic-title {
   font-size: 32rem;
   padding: 10rem;
 }
 
-div.topic_image_1 {
+div.topic-image-1 {
   width: 670rem;
   img {
     width: 100%;
@@ -56,7 +56,7 @@ div.topic_image_1 {
   }
 }
 
-div.topic_image_4 {
+div.topic-image-4 {
   display: flex;
   flex: 0 1 670rem;
   flex-flow: row wrap;

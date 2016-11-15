@@ -1,25 +1,25 @@
-<div class="topic">
-  <div class="topic_head">
+<div class="topic-container">
+  <div class="topic-head">
     <%= image_tag topic.customer.avatar.try(:url)||'' %>
-    <div class="topic_head_people">
+    <div class="topic-head-people">
       <p>
-        <span class="topic_head_name"><%= topic.customer.name -%></span>
-        <span class="topic_head_title"><%= topic.customer.title -%></span>
+        <span class="topic-head-name"><%= topic.customer.name -%></span>
+        <span class="topic-head-title"><%= topic.customer.title -%></span>
       </p>
       <p><%= topic.customer.company -%></p>
     </div>
   </div>
-  <div class="topic_title">
+  <div class="topic-title">
     <p><%= topic.title -%></p>
   </div>
   <% if topic.images.count > 1 -%>
-    <div class="topic_image_4">
+    <div class="topic-image-4">
       <% topic.images.each do |ti| -%>
         <%= image_tag ti.image.url(thumb: '@!t4') -%>
       <% end %>
     </div>
   <% else -%>
-    <div class="topic_image_1">
+    <div class="topic-image-1">
       <%= image_tag topic.images.first.image.url(thumb: '@!t1') unless topic.images.blank? %>
     </div>
   <% end -%>
