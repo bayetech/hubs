@@ -1,5 +1,13 @@
 @import 'normalize';
 
+@mixin hub-icon-style() {
+  background-size: 32rem 29rem;
+  float: left;
+  height: 29rem;
+  margin-right: 12rem;
+  width: 32rem;
+}
+
 $page-backgroud: #b2b2b2;
 $topic-background: #fff;
 $bold-text-color: #333;
@@ -21,33 +29,21 @@ p {
 }
 
 .gray-reply {
+  @include hub-icon-style();
   background: image-url('hubs/gray_comment.png') no-repeat;
-  background-size: 32rem 29rem;
-  float: left;
-  height: 29rem;
   margin-top: 11rem;
-  margin-right: 12rem;
-  width: 32rem;
 }
 
 .gray-liker {
+  @include hub-icon-style();
   background: image-url('hubs/gray_heart.png') no-repeat;
-  background-size: 32rem 29rem;
-  float: left;
-  height: 29rem;
   margin-top: 8rem;
-  margin-right: 12rem;
-  width: 32rem;
 }
 
 .red-liker {
+  @include hub-icon-style();
   background: image-url('hubs/red_heart.png') no-repeat;
-  background-size: 32rem 29rem;
-  float: left;
-  height: 29rem;
   margin-top: 8rem;
-  margin-right: 12rem;
-  width: 32rem;
 }
 
 .bold-text {
@@ -96,9 +92,9 @@ p {
   }
 
   .topic-category {
+    color: $category-text-color;
     float: right;
     margin-top: 16rem;
-    color: $category-text-color;
   }
 }
 
