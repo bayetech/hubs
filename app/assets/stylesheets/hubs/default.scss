@@ -8,6 +8,11 @@
   width: 32rem;
 }
 
+@mixin hub-topic-image-style() {
+  border-radius: 14rem;
+  margin-bottom: 15rem;
+}
+
 $page-backgroud: #b2b2b2;
 $topic-background: #fff;
 $bold-text-color: #333;
@@ -108,9 +113,8 @@ p {
   width: 670rem;
 
   img {
-    border-radius: 14rem;
+    @include hub-topic-image-style();
     width: 100%;
-    margin-bottom: 15rem;
   }
 }
 
@@ -121,10 +125,9 @@ p {
   align-content: space-between;
 
   img {
-    border-radius: 14rem;
+    @include hub-topic-image-style();
     height: 316rem;
     width: 324rem;
-    margin-bottom: 15rem;
   }
 }
 
@@ -135,10 +138,9 @@ p {
   align-content: space-between;
 
   img {
-    border-radius: 14rem;
+    @include hub-topic-image-style();
     height: 210rem;
     width: 214rem;
-    margin-bottom: 15rem;
   }
 }
 
