@@ -7,6 +7,11 @@ module Hub
   class Engine < ::Rails::Engine
     engine_name 'hub'
     isolate_namespace Hub
+
+    # sets the manifests / assets to be precompiled, even when initialize_on_precompile is false
+    initializer 'hubs.assets.precompile', group: :all do |app|
+      app.config.assets.precompile += %w(hubs/hub.js hubs/default.css)
+    end
   end
 
   if defined? Grape
