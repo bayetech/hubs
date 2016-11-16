@@ -11,7 +11,7 @@
     <p class="topic-category"><%= topic.category -%></p>
   </div>
   <div class="topic-title">
-    <p><%= topic.title -%></p>
+    <p><%= sanitize hub_deal_with_emoji(topic.title).html_safe -%></p>
   </div>
   <% if topic.topic_images_count > 4 -%>
     <div class="topic-image-9">
