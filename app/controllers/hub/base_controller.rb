@@ -1,5 +1,5 @@
 module Hub
-  class BaseController < ::ApplicationController
+  class BaseController < ActionController::Base
     layout 'hub_default'
   end
 end
