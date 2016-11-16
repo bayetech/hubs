@@ -1,6 +1,6 @@
 <div class="topic-content">
   <div class="topic-head">
-    <%= image_tag topic.customer.avatar.try(:url)||'' %>
+    <%= hub_avatar_tag topic.customer -%>
     <div class="topic-head-people">
       <p>
         <span class="topic-head-name bold-text"><%= topic.customer.name -%></span>
@@ -39,7 +39,7 @@
 <% if topic.likers_count > 0 -%>
   <div class="topic-likers">
     <% topic.likers.limit(9).each do |l| -%>
-      <%= image_tag l.customer.avatar.try(:url)||'' %>
+      <%= hub_avatar_tag l.customer -%>
     <% end -%>
   </div>
 <% end -%>

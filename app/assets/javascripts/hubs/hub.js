@@ -15,6 +15,12 @@
 //= require turbolinks
 //= require_tree .
 
+function hub_avatar_img_error(image) {
+    image.onerror = "";
+    image.src = "https://baye-media.oss-cn-shanghai.aliyuncs.com/default_head.png";
+    return true;
+}
+
 function adaptFun(designPercent){
   var mainWidth = document.body.clientWidth;
   var fontSize = mainWidth/designPercent + 'px';
