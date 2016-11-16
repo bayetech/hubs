@@ -34,21 +34,21 @@ p {
 }
 
 .gray-reply {
-  @include hub-icon-style();
   background: image-url('hubs/gray_comment.png') no-repeat;
   margin-top: 11rem;
+  @include hub-icon-style();
 }
 
 .gray-liker {
-  @include hub-icon-style();
   background: image-url('hubs/gray_heart.png') no-repeat;
   margin-top: 8rem;
+  @include hub-icon-style();
 }
 
 .red-liker {
-  @include hub-icon-style();
   background: image-url('hubs/red_heart.png') no-repeat;
   margin-top: 8rem;
+  @include hub-icon-style();
 }
 
 .bold-text {
@@ -113,8 +113,8 @@ p {
   width: 670rem;
 
   img {
-    @include hub-topic-image-style();
     width: 100%;
+    @include hub-topic-image-style();
   }
 }
 
@@ -125,9 +125,9 @@ p {
   align-content: space-between;
 
   img {
-    @include hub-topic-image-style();
     height: 316rem;
     width: 324rem;
+    @include hub-topic-image-style();
   }
 }
 
@@ -138,9 +138,9 @@ p {
   align-content: space-between;
 
   img {
-    @include hub-topic-image-style();
     height: 210rem;
     width: 214rem;
+    @include hub-topic-image-style();
   }
 }
 
