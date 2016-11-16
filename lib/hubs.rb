@@ -1,6 +1,8 @@
 require 'autoprefixer-rails'
 require 'normalize-scss'
 require 'carrierwave'
+require 'turbolinks'
+require 'jquery-rails'
 require 'hub/version'
 
 module Hub
