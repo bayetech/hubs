@@ -27,8 +27,10 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency 'activerecord', '>= 4.2.7', '< 5.1.x'
   spec.add_runtime_dependency 'autoprefixer-rails', '~> 6.5.3'
-  spec.add_runtime_dependency 'normalize-scss', '~> 6.0.0'
   spec.add_runtime_dependency 'carrierwave', '~> 0.11.2'
+  spec.add_runtime_dependency 'jquery-rails', '~> 4.2.1'
+  spec.add_runtime_dependency 'normalize-scss', '~> 6.0.0'
+  spec.add_runtime_dependency 'turbolinks', '~> 5.0.1'
   spec.add_development_dependency 'bundler', '~> 1.13'
   spec.add_development_dependency 'rake', '~> 10.0'
   spec.add_development_dependency 'rspec', '~> 3.0'
