@@ -1,9 +1,11 @@
-require 'autoprefixer-rails'
-require 'normalize-scss'
 require 'carrierwave'
-require 'turbolinks'
-require 'jquery-rails'
-require 'gemojione'
+unless defined? Grape
+  require 'autoprefixer-rails'
+  require 'normalize-scss'
+  require 'turbolinks'
+  require 'jquery-rails'
+  require 'gemojione'
+end
 require 'hub/version'
 
 module Hub
