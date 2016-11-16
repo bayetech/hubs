@@ -110,32 +110,35 @@ p {
   img {
     border-radius: 14rem;
     width: 100%;
+    margin-bottom: 15rem;
   }
 }
 
 .topic-image-4 {
   display: flex;
-  flex: 0 1 670rem;
   flex-flow: row wrap;
   justify-content: space-between;
+  align-content: space-between;
 
   img {
     border-radius: 14rem;
     height: 316rem;
     width: 324rem;
+    margin-bottom: 15rem;
   }
 }
 
 .topic-image-9 {
   display: flex;
-  flex: 0 1 670rem;
   flex-flow: row wrap;
   justify-content: space-between;
+  align-content: space-between;
 
   img {
     border-radius: 14rem;
     height: 210rem;
     width: 214rem;
+    margin-bottom: 15rem;
   }
 }
 
@@ -145,6 +148,6 @@ p {
   display: flex;
   flex-flow: row wrap;
   font-size: 28rem;
-  height: 60rem;
+  height: 40rem;
   justify-content: space-between;
 }
