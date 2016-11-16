@@ -1,10 +1,12 @@
 @import 'normalize';
 
-@mixin hub-icon-style() {
+@mixin hub-icons($image-url, $margin-top:8rem) {
+  background: image-url($image-url) no-repeat;
   background-size: 32rem 29rem;
   float: left;
   height: 29rem;
   margin-right: 12rem;
+  margin-top: $margin-top;
   width: 32rem;
 }
 
@@ -34,21 +36,15 @@ p {
 }
 
 .gray-reply {
-  background: image-url('hubs/gray_comment.png') no-repeat;
-  margin-top: 11rem;
-  @include hub-icon-style();
+  @include hub-icons('hubs/gray_comment.png', 11rem);
 }
 
 .gray-liker {
-  background: image-url('hubs/gray_heart.png') no-repeat;
-  margin-top: 8rem;
-  @include hub-icon-style();
+  @include hub-icons('hubs/gray_heart.png');
 }
 
 .red-liker {
-  background: image-url('hubs/red_heart.png') no-repeat;
-  margin-top: 8rem;
-  @include hub-icon-style();
+  @include hub-icons('hubs/red_heart.png');
 }
 
 .bold-text {
