@@ -10,6 +10,7 @@ module Hub
         wechat_user = customer.wechat_users.first
         raw_image_url = wechat_user.avatar.url if wechat_user.present?
       end
+      raw_image_url = 'https://baye-media.oss-cn-shanghai.aliyuncs.com/default_head.png' if raw_image_url.blank?
       image_tag raw_image_url, onerror: 'hub_avatar_img_error(this);'
     end
   end
