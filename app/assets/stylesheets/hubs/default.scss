@@ -153,3 +153,15 @@ p {
   height: 40rem;
   justify-content: space-between;
 }
+
+.topic-likers {
+  background-color: $topic-background;
+  border-top: 1px solid $page-backgroud;
+  padding: 10rem 40rem;
+  img {
+    border-radius: 50%;
+    height: 60rem;
+    width: 60rem;
+    margin-right: 10rem;
+  }
+}

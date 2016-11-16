@@ -36,3 +36,10 @@
     <span><i class="gray-liker"></i>赞</span>
   </div>
 </div>
+<% if topic.likers_count > 0 -%>
+<div class="topic-likers">
+<% topic.likers.limit(9).each do |l| -%>
+  <%= image_tag l.customer.avatar.try(:url)||'' %>
+<% end -%>
+</div>
+<% end -%>
