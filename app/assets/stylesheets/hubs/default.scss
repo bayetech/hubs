@@ -119,10 +119,10 @@ p {
 }
 
 .topic-image-4 {
+  align-content: space-between;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  align-content: space-between;
 
   img {
     height: 316rem;
@@ -132,10 +132,10 @@ p {
 }
 
 .topic-image-9 {
+  align-content: space-between;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  align-content: space-between;
 
   img {
     height: 210rem;
@@ -158,10 +158,11 @@ p {
   background-color: $topic-background;
   border-top: 1px solid $page-backgroud;
   padding: 10rem 40rem;
+
   img {
     border-radius: 50%;
     height: 60rem;
-    width: 60rem;
     margin-right: 10rem;
+    width: 60rem;
   }
 }
