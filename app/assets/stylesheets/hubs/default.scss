@@ -113,8 +113,8 @@ p {
   width: 670rem;
 
   img {
-    width: 100%;
     @include hub-topic-image-style();
+    width: 100%;
   }
 }
 
@@ -125,9 +125,9 @@ p {
   justify-content: space-between;
 
   img {
+    @include hub-topic-image-style();
     height: 316rem;
     width: 324rem;
-    @include hub-topic-image-style();
   }
 }
 
@@ -138,9 +138,9 @@ p {
   justify-content: space-between;
 
   img {
+    @include hub-topic-image-style();
     height: 210rem;
     width: 214rem;
-    @include hub-topic-image-style();
   }
 }
 
@@ -171,6 +171,7 @@ p {
   background-color: $topic-background;
   font-size: 30rem;
   padding: 10rem 40rem 30rem;
+
   img {
     vertical-align: middle;
   }
