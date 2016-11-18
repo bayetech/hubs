@@ -157,6 +157,7 @@ p {
 .topic-likers {
   background-color: $topic-background;
   border-top: 1px solid $page-backgroud;
+  border-bottom: 1px solid $category-text-color;
   padding: 10rem 40rem;
 
   img {
@@ -177,9 +178,14 @@ p {
   }
 }
 
+.topic-reply {
+  border-bottom: 1px solid $category-text-color;
+  padding: 0 0 0 40rem;
+}
+
 .topic-detail-replies {
   background-color: $topic-background;
-  padding: 10rem 0 10rem 40rem;
+  padding: 10rem 0 10rem 0rem;
 
   img.head {
     border-radius: 50%;
