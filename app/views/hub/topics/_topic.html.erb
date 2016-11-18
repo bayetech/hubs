@@ -31,7 +31,9 @@
     </div>
   <% end -%>
   <div class="topic-footer">
-    <span class="light-text flex-large-item"><%= hub_time_ago_in_words topic.activity_at -%></span>
+    <%= link_to topic_path(id: topic.uid) do -%>
+      <span class="light-text flex-large-item"><%= hub_time_ago_in_words topic.activity_at -%></span>
+    <% end -%>
     <span><i class="gray-reply"></i>评论</span>
     <span><i class="gray-liker"></i>赞</span>
   </div>
