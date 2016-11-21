@@ -4,7 +4,12 @@ module Hub
     before_action :set_topic_and_title, only: [:show]
 
     def index
-      @topics = Topic.page_includes.recent.show_in_recent.limit 20
+      customer = helpers.hub_current_customer
+      if customer.present?
+        @topics = customer.feed.limit 20
+      else
+        @topics = Topic.page_includes.recent.show_in_recent.limit 20
+      end
     end
 
     def show

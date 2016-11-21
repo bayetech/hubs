@@ -20,7 +20,7 @@ module Hub
     end
 
     def hub_current_customer
-      session_customer = Customer.find_by(id: session[:customer_id])
+      session_customer = Customer.find_by(id: Rails.env.development? ? 901 : session[:customer_id])
       return session_customer if session_customer.present?
 
       app_client = Baye::CustomerClient.alive.find_by(session: request.headers['Authorization'].to_s)
