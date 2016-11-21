@@ -18,5 +18,15 @@ module Hub
       raw_image_url = 'https://baye-media.oss-cn-shanghai.aliyuncs.com/default_head.png' if raw_image_url.blank?
       image_tag raw_image_url, onerror: 'hub_avatar_img_error(this);', class: style_class
     end
+
+    def hub_current_customer
+      session_customer = Customer.find_by(id: session[:customer_id])
+      return session_customer if session_customer.present?
+
+      app_client = Baye::CustomerClient.alive.find_by(session: request.headers['Authorization'].to_s)
+
+      session[:customer_id] = app_client.try(:customer).try(:id)
+      app_client.try(:customer)
+    end
   end
 end
