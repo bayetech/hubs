@@ -34,5 +34,5 @@ function adaptFun(designPercent){
 }
 
 $(document).ready(function() {
-  adaptFun(750);
+  adaptFun(750/50);
 });
