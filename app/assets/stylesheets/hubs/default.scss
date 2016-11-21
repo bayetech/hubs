@@ -15,7 +15,7 @@
   margin-bottom: .3rem;
 }
 
-$page-backgroud: #b2b2b2;
+$page-backgroud: #d9d9d9;
 $topic-background: #fff;
 $bold-text-color: #333;
 $head-text-color: #666;
@@ -65,7 +65,7 @@ p {
 
 .topic-content {
   background-color: $topic-background;
-  border-top: 1px solid $page-backgroud;
+  border-bottom: 1px solid $page-backgroud;
   display: flex;
   flex: none;
   flex-direction: column;
