@@ -1,5 +1,5 @@
 <%= render partial: 'topic_common', locals: { topic: @topic } -%>
-<% if @topic.replies_count > 0 -%>
+<% if @topic.replies_count.to_i > 0 -%>
   <div class="topic-detail-replies">
     <% @topic.replies.each do |r| -%>
       <% next if r.new_record? -%>

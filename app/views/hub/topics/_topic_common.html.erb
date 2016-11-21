@@ -13,13 +13,13 @@
   <div class="topic-title">
     <p><%= sanitize hub_deal_with_emoji(topic.title).html_safe -%></p>
   </div>
-  <% if topic.topic_images_count > 4 -%>
+  <% if topic.topic_images_count.to_i > 4 -%>
     <div class="topic-image-9">
       <% topic.images.each do |ti| -%>
         <%= image_tag ti.image.url(thumb: '@!t9') -%>
       <% end %>
     </div>
-  <% elsif topic.topic_images_count > 1 -%>
+  <% elsif topic.topic_images_count.to_i > 1 -%>
     <div class="topic-image-4">
       <% topic.images.each do |ti| -%>
         <%= image_tag ti.image.url(thumb: '@!t4') -%>
@@ -38,7 +38,7 @@
     <span><i class="gray-liker"></i>赞</span>
   </div>
 </div>
-<% if topic.likers_count > 0 -%>
+<% if topic.likers_count.to_i > 0 -%>
   <div class="topic-likers">
     <% topic.likers.limit(9).each do |l| -%>
       <%= hub_avatar_tag l.customer -%>
