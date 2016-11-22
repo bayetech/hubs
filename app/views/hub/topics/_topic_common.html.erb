@@ -1,13 +1,15 @@
 <div class="topic-content">
   <div class="topic-head">
     <%= hub_avatar_tag topic.customer -%>
-    <div class="topic-head-people">
-      <p>
-        <span class="topic-head-name bold-text"><%= topic.customer.name -%></span>
-        <span class="topic-head-title"><%= topic.customer.title -%></span>
-      </p>
-      <p><%= topic.customer.company -%></p>
-    </div>
+    <%= link_to topic_path(id: topic.uid), class: 'flex-large-item' do -%>
+      <div class="topic-head-people">
+        <p>
+          <span class="topic-head-name bold-text"><%= topic.customer.name -%></span>
+          <span class="topic-head-title"><%= topic.customer.title -%></span>
+        </p>
+        <p><%= topic.customer.company -%></p>
+      </div>
+    <% end -%>
     <p class="topic-category"><%= topic.category unless topic.category == '巴一下' -%></p>
   </div>
   <div class="topic-title">

@@ -73,14 +73,15 @@ p {
 }
 
 .topic-head {
-  color: $head-text-color;
   font-size: .56rem;
 
   .topic-head-name {
+    color: $head-text-color;
     font-size: .8rem;
   }
 
   .topic-head-title {
+    color: $head-text-color;
     left: .4rem;
   }
 
@@ -92,6 +93,7 @@ p {
   }
 
   .topic-head-people {
+    color: $head-text-color;
     display: inline-block;
     margin: 0 .4rem;
   }
