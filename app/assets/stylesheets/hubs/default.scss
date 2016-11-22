@@ -106,11 +106,12 @@ p {
 }
 
 .topic-title {
+  font-size: .64rem;
+  padding: .32rem .2rem;
+
   a {
     color: $title-text-color;
   }
-  font-size: .64rem;
-  padding: .32rem .2rem;
 }
 
 .topic-image-1 {
