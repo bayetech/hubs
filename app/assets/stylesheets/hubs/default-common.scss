@@ -130,19 +130,6 @@ img.emoji {
   }
 }
 
-.topic-image-4 {
-  align-content: space-between;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-
-  img {
-    @include hub-topic-image-style();
-    height: 6.32rem;
-    width: 6.48rem;
-  }
-}
-
 .topic-image-9 {
   align-content: space-between;
   display: flex;
