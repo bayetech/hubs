@@ -10,10 +10,10 @@ module Hub
     end
 
     def hub_avatar_tag(customer, style_class: nil)
-      raw_image_url = customer.avatar.try(:url)
+      raw_image_url = customer.avatar.try(:url, thumb: '@100w_1c')
       if raw_image_url.blank?
         wechat_user = customer.wechat_users.first
-        raw_image_url = wechat_user.avatar.url if wechat_user.present?
+        raw_image_url = wechat_user.avatar.try(:url, thumb: '@100w_1c') if wechat_user.present?
       end
       raw_image_url = 'https://baye-media.oss-cn-shanghai.aliyuncs.com/default_head.png' if raw_image_url.blank?
       image_tag raw_image_url, onerror: 'hub_avatar_img_error(this);', class: style_class
