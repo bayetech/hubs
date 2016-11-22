@@ -1,12 +1,14 @@
 @import 'normalize';
 
-@mixin hub-icons($image-url, $margin-top: .14rem) {
+@mixin hub-icons($image-url, $margin-top: .18rem) {
   background: image-url($image-url) no-repeat;
+  background-position: 0 0;
   background-size: .64rem .58rem;
   float: left;
   height: .58rem;
   margin-right: .24rem;
   margin-top: $margin-top;
+  vertical-align: text-top;
   width: .64rem;
 }
 
@@ -45,7 +47,7 @@ img.emoji {
 }
 
 .gray-reply {
-  @include hub-icons('hubs/gray_comment.png', .20rem);
+  @include hub-icons('hubs/gray_comment.png', .24rem);
 }
 
 .gray-liker {
