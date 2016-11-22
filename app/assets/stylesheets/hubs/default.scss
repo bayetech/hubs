@@ -134,7 +134,7 @@ img.emoji {
   align-content: space-between;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 
   img {
     @include hub-topic-image-style();
