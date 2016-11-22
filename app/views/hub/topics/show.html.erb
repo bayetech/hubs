@@ -1,4 +1,11 @@
 <%= render partial: 'topic_common', locals: { topic: @topic } -%>
+<% if topic.likers_count.to_i > 0 -%>
+  <div class="topic-likers">
+    <% topic.likers.limit(9).each do |l| -%>
+      <%= hub_avatar_tag l.customer -%>
+    <% end -%>
+  </div>
+<% end -%>
 <% if @topic.replies_count.to_i > 0 -%>
   <div class="topic-detail-replies">
     <% @topic.replies.each do |r| -%>
