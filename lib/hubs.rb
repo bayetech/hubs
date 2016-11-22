@@ -18,6 +18,7 @@ module Hub
       app.config.assets.precompile += %w(
         hubs/hub.js
         hubs/default.css
+        hubs/default-oppo.css
         face/iconfont-biaoqing.png
         face/iconfont.png
         face/1.gif
