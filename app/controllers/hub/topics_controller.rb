@@ -6,7 +6,7 @@ module Hub
     def index
       customer = helpers.hub_current_customer
       if customer.present?
-        @topics = customer.feed.limit 20
+        @topics = Topic.page_includes.recent.where(customer_id: 901).limit 20
       else
         @topics = Topic.page_includes.recent.show_in_recent.limit 20
       end
