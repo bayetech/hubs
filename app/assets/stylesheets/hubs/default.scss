@@ -1,6 +1,6 @@
 @import 'normalize';
 
-@mixin hub-icons($image-url, $margin-top: .16rem) {
+@mixin hub-icons($image-url, $margin-top: .14rem) {
   background: image-url($image-url) no-repeat;
   background-size: .64rem .58rem;
   float: left;
@@ -40,7 +40,7 @@ p {
 }
 
 .gray-reply {
-  @include hub-icons('hubs/gray_comment.png', .22rem);
+  @include hub-icons('hubs/gray_comment.png', .20rem);
 }
 
 .gray-liker {
@@ -95,7 +95,7 @@ p {
   .topic-head-people {
     color: $head-text-color;
     display: inline-block;
-    margin: 0 .4rem;
+    margin: 0 .6rem;
   }
 
   .topic-category {
@@ -195,7 +195,7 @@ p {
   img.head {
     border-radius: 50%;
     height: 1.2rem;
-    margin-top: .2rem;
+    margin-top: .6rem;
     vertical-align: top;
     width: 1.2rem;
   }
