@@ -106,7 +106,9 @@ p {
 }
 
 .topic-title {
-  color: $title-text-color;
+  a {
+    color: $title-text-color;
+  }
   font-size: .64rem;
   padding: .32rem .2rem;
 }

@@ -13,7 +13,9 @@
     <p class="topic-category"><%= topic.category unless topic.category == '巴一下' -%></p>
   </div>
   <div class="topic-title">
-    <p><%= sanitize hub_deal_with_emoji(topic.title).html_safe -%></p>
+    <%= link_to topic_path(id: topic.uid), class: 'flex-large-item' do -%>
+      <p><%= sanitize hub_deal_with_emoji(topic.title).html_safe -%></p>
+    <% end -%>
   </div>
   <% if topic.topic_images_count.to_i > 4 -%>
     <div class="topic-image-9">
