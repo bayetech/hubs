@@ -121,15 +121,6 @@ img.emoji {
   }
 }
 
-.topic-image-1 {
-  width: 13.4rem;
-
-  img {
-    @include hub-topic-image-style();
-    width: 100%;
-  }
-}
-
 .topic-image-9 {
   align-content: space-between;
   display: flex;

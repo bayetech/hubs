@@ -1,5 +1,14 @@
 @import 'default-common';
 
+.topic-image-1 {
+  width: 13.4rem;
+
+  img {
+    @include hub-topic-image-style();
+    width: 100%;
+  }
+}
+
 .topic-image-4 {
   align-content: space-between;
   display: flex;
