@@ -35,8 +35,4 @@ function adaptFun(designPercent){
 
 $(document).ready(function() {
   adaptFun(750/50);
-
-  addEventListener("turbolinks:render", function() {
-    document.body.scrollTop = 0;
-  });
 });
