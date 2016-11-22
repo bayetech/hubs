@@ -8,7 +8,7 @@
       </p>
       <p><%= topic.customer.company -%></p>
     </div>
-    <p class="topic-category"><%= topic.category -%></p>
+    <p class="topic-category"><%= topic.category unless topic.category == '巴一下' -%></p>
   </div>
   <div class="topic-title">
     <p><%= sanitize hub_deal_with_emoji(topic.title).html_safe -%></p>
