@@ -121,19 +121,6 @@ img.emoji {
   }
 }
 
-.topic-image-9 {
-  align-content: space-between;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-
-  img {
-    @include hub-topic-image-style();
-    height: 4.2rem;
-    width: 4.28rem;
-  }
-}
-
 .topic-footer {
   align-items: center;
   color: $praise-text-color;
