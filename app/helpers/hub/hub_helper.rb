@@ -2,7 +2,7 @@ module Hub
   module HubHelper
     def hub_deal_with_emoji(str)
       new_str = Gemojione.replace_unicode_moji_with_images(str).html_safe
-      new_str.gsub(%r{\/(\d+)\/}) { |s| x = s.delete('/', ''); image_tag "face/#{x}.gif" }
+      new_str.gsub(%r{\/(\d+)\/}) { |s| image_tag "face/#{s}.gif" }
     end
 
     def hub_time_ago_in_words(from_time)
