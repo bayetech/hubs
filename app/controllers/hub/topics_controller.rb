@@ -10,12 +10,14 @@ module Hub
       else
         @topics = Topic.page_includes.recent.show_in_recent.limit 20
       end
+      @refresh_heads_bar = false
     end
 
     def show
       return redirect_to hubs_topics_path unless @topic.present?
       @replies = @topic.replies.includes(:customer)
       @reply = @replies.build
+      @refresh_heads_bar = true
     end
 
     def like

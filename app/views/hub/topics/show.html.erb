@@ -1,4 +1,4 @@
-<%= render partial: 'topic', locals: { topic: @topic } -%>
+<%= render partial: 'topic', locals: { topic: @topic, refresh_heads_bar: @refresh_heads_bar } -%>
 <% if @topic.likers_count.to_i > 0 -%>
   <div class="topic-likers">
     <% @topic.likers.limit(9).each do |l| -%>
