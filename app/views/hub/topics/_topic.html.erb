@@ -39,7 +39,7 @@
       <span class="light-text"><%= hub_time_ago_in_words topic.activity_at -%></span>
     <% end -%>
     <%= link_to topic_path(id: topic.uid) do -%>
-      <span><i class="gray-reply"></i><%= topic.replies_count == 0 ? '评论' : topic.replies_count -%></span>
+      <span><i class="gray-reply"></i></span>
     <% end -%>
     <%= hub_liker_praise_link(hub_current_customer, topic, refresh_heads_bar: refresh_heads_bar) %>
   </div>
