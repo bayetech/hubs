@@ -1,7 +1,7 @@
 module Hub
   class TopicsController < Hub::BaseController
     helper Hub::HubHelper
-    before_action :set_topic_and_title, only: [:show]
+    before_action :set_topic_title_current_customer, except: [:index]
 
     def index
       customer = helpers.hub_current_customer
@@ -18,9 +18,21 @@ module Hub
       @reply = @replies.build
     end
 
+    def like
+      @current_customer.like(@topic) unless @current_customer.liked?(@topic)
+      render 'like_or_unlike'
+    end
+
+    def unlike
+      @current_customer.unlike(@topic) if @current_customer.liked?(@topic)
+      @topic.reload # seems a rails bug? must reload to make sure topic.likers_count correct
+      render 'like_or_unlike'
+    end
+
     private
 
-    def set_topic_and_title
+    def set_topic_title_current_customer
+      @current_customer = helpers.hub_current_customer
       @topic = Hub::Topic.find_by(uid: params[:id])
       return unless @topic.present?
       @title = @topic.title.truncate(21)

@@ -123,12 +123,15 @@ img.emoji {
 
 .topic-footer {
   align-items: center;
-  color: $praise-text-color;
   display: flex;
   flex-flow: row wrap;
   font-size: .56rem;
   height: .8rem;
   justify-content: space-between;
+
+  a {
+    color: $praise-text-color;
+  }
 }
 
 .topic-likers {

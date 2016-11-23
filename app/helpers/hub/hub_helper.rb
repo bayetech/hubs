@@ -28,5 +28,28 @@ module Hub
       session[:customer_id] = app_client.try(:customer).try(:id)
       app_client.try(:customer)
     end
+
+    def hub_liker_praise_link(current_user, topic, refresh_heads_bar: false)
+      if current_user.blank?
+        content_tag(:span) do
+          concat(content_tag(:i, '', class: 'red-liker'))
+          concat(topic.likers_count.zero? ? '赞' : topic.likers_count)
+        end
+      elsif current_user.liked? topic
+        link_to unlike_topic_path(id: topic.uid, refresh_heads_bar: refresh_heads_bar), remote: true, method: :patch, class: "t_#{topic.uid}" do
+          content_tag(:span) do
+            concat(content_tag(:i, '', class: 'red-liker'))
+            concat(topic.likers_count.zero? ? '赞' : topic.likers_count)
+          end
+        end
+      else
+        link_to like_topic_path(id: topic.uid, refresh_heads_bar: refresh_heads_bar), remote: true, method: :patch, class: "t_#{topic.uid}" do
+          content_tag(:span) do
+            concat(content_tag(:i, '', class: 'gray-liker'))
+            concat(topic.likers_count.zero? ? '赞' : topic.likers_count)
+          end
+        end
+      end
+    end
   end
 end
