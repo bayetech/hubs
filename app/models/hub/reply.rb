@@ -5,7 +5,11 @@ module Hub
 
     belongs_to :customer
     belongs_to :topic, foreign_key: :hubs_topic_id
-    belongs_to :reply_to_customer, class_name: Customer
+    if Rails::VERSION::MAJOR >= 5
+      belongs_to :reply_to_customer, class_name: Customer, optional: true
+    else
+      belongs_to :reply_to_customer, class_name: Customer
+    end
     has_one :notification, class_name: ReplyNotification, foreign_key: :hubs_reply_id, dependent: :destroy
     has_one :reply_to_notification, class_name: ReplyNotification, foreign_key: :hubs_reply_id, dependent: :destroy
 

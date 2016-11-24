@@ -65,6 +65,10 @@ input[type="submit"] {
   padding: 0.1rem 0.2rem;
 }
 
+.hub_kong {
+  margin: 2.2rem 0;
+}
+
 .gray-reply {
   @include hub-icons('hubs/gray_comment.png', .24rem);
 }

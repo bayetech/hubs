@@ -20,6 +20,20 @@ module Hub
       @refresh_heads_bar = true
     end
 
+    def reply
+      @reply = @topic.replies.build(reply_params)
+      @reply.customer_id = @current_customer.id
+      if @reply.save
+        flash[:notice] = '已回复成功。'
+      else
+        flash[:alert] = @reply.errors.full_messages.join('<br />')
+      end
+      respond_to do |format|
+        format.html { redirect_to topic_path(id: @topic.uid) }
+        format.js { render }
+      end
+    end
+
     def like
       @current_customer.like(@topic) unless @current_customer.liked?(@topic)
       render 'like_or_unlike'
@@ -39,6 +53,10 @@ module Hub
       return unless @topic.present?
       @title = @topic.title.truncate(21)
       @content_title = '巴圈 — 物以类聚，爷以群分'
+    end
+
+    def reply_params
+      params.require(:reply).permit(:body, :reply_to_customer_id)
     end
   end
 end

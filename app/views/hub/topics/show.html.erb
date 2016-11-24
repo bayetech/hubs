@@ -17,6 +17,7 @@
     <% end -%>
   </div>
 <% end -%>
+<div class="hub_kong"></div>
 <% if @current_customer -%>
   <div class="topic-footer-bar">
     <%= form_for @reply, as: :reply, url: reply_topic_path(id: @topic.uid), remote: true do |f| %>
@@ -24,7 +25,7 @@
         <%= image_tag 'hubs/emotion.png', class: 'emotion' -%>
         <%= f.text_area :body, rows: '1', placeholder: '输入评论', autofocus: true %>
       </span>
-      <%= submit_tag '发送', id: 'btn_reply' -%>
+      <%= submit_tag '发送', id: 'btn_reply', data: { disable_with: '发送中' } -%>
       <%= f.hidden_field :reply_to_customer_id, value: '', id: :reply_to %>
     <% end -%>
   </div>
