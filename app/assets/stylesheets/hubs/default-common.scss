@@ -28,6 +28,8 @@ $category-text-color: #ababab;
 $bottom-border-color: #bfbfbf;
 $bottom-backgroud: #f5f5f5;
 $reply-bar-border: #b1b1b1;
+$primary-button-backgroud: #18b091;
+$primary-button-text: #fff;
 
 body {
   background-color: $page-backgroud;
@@ -47,6 +49,20 @@ p {
 img.emoji {
   height: 20px;
   width: 20px;
+}
+
+input[type="submit"] {
+  background-color: $primary-button-backgroud;
+  border-radius: 4px;
+  border: 1px solid $primary-button-backgroud;
+  color: $primary-button-text;
+  vertical-align: top;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  line-height: 0.9rem;
+  margin: 0 0.2rem;
+  padding: 0.1rem 0.2rem;
 }
 
 .gray-reply {
@@ -211,18 +227,30 @@ img.emoji {
   bottom: 0;
   position: fixed;
   width: 100%;
+  padding: .35rem;
+  line-height: 1.2rem;
+  height: 1.26rem;
 }
 
 .reply-bar {
   background-color: $topic-background;
   border: 1px solid $reply-bar-border;
   border-radius: 4px;
-  margin: .2rem .3rem;
-  padding: .1rem .3rem;
+  margin: 0 .2rem 0 0;
+  padding: .1rem 0;
+  margin: 2px;
 
   img.emotion {
     height: 1.04rem;
-    vertical-align: middle;
-    width: 1.16;
+    vertical-align: top;
+    padding: .1rem .3rem;
+  }
+
+  textarea {
+    border: none;
+    outline: none;
+    vertical-align: top;
+    top: 0.6rem;
+    width: 10rem;
   }
 }
