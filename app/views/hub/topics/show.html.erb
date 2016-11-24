@@ -6,14 +6,7 @@
   <div class="topic-detail-replies">
     <% @topic.replies.each do |r| -%>
       <% next if r.new_record? -%>
-      <div class="topic-reply">
-        <%= hub_avatar_tag r.customer, style_class: :head -%>
-        <div class="topic-reply-content">
-          <p class="topic-reply-time"><%= hub_time_ago_in_words r.created_at -%></p>
-          <p class="topic-reply-name"><%= r.customer.name -%></p>
-          <p class="topic-reply-body"><%= sanitize hub_deal_with_emoji(r.body).html_safe -%></p>
-        </div>
-      </div>
+      <%= render partial: 'hub/replies/reply', locals: {reply: r} %>
     <% end -%>
   </div>
 <% end -%>

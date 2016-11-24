@@ -1,0 +1,8 @@
+<div class="topic-reply">
+  <%= hub_avatar_tag reply.customer, style_class: :head -%>
+  <div class="topic-reply-content">
+    <p class="topic-reply-time"><%= hub_time_ago_in_words reply.created_at -%></p>
+    <p class="topic-reply-name"><%= reply.customer.name -%></p>
+    <p class="topic-reply-body"><%= sanitize hub_deal_with_emoji(reply.body).html_safe -%></p>
+  </div>
+</div>
