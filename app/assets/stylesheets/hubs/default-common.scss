@@ -25,6 +25,9 @@ $title-text-color: #777;
 $light-text-color: #999;
 $praise-text-color: #172434;
 $category-text-color: #ababab;
+$bottom-border-color: #bfbfbf;
+$bottom-backgroud: #f5f5f5;
+$reply-bar-border: #b1b1b1;
 
 body {
   background-color: $page-backgroud;
@@ -199,5 +202,27 @@ img.emoji {
     color: $title-text-color;
     font-size: .56rem;
     padding: 0 0 .2rem .4rem;
+  }
+}
+
+.topic-footer-bar {
+  background-color: $bottom-backgroud;
+  border: 1px solid $bottom-border-color;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+}
+
+.reply-bar {
+  background-color: $topic-background;
+  border: 1px solid $reply-bar-border;
+  border-radius: 4px;
+  margin: .2rem .3rem;
+  padding: .1rem .3rem;
+
+  img.emotion {
+    height: 1.04rem;
+    vertical-align: middle;
+    width: 1.16;
   }
 }

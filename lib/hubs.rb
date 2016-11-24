@@ -19,7 +19,7 @@ module Hub
         hubs/hub.js
         hubs/default.css
         hubs/default-oppo.css
-        face/iconfont-biaoqing.png
+        hubs/emotion.png
         face/iconfont.png
         face/1.gif
         face/2.gif
