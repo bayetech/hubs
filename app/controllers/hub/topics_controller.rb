@@ -14,7 +14,7 @@ module Hub
     end
 
     def show
-      return redirect_to hubs_topics_path unless @topic.present?
+      return redirect_to topics_path unless @topic.present?
       @replies = @topic.replies.includes(:customer)
       @reply = @replies.build
       @refresh_heads_bar = true
@@ -31,6 +31,15 @@ module Hub
       respond_to do |format|
         format.html { redirect_to topic_path(id: @topic.uid) }
         format.js { render }
+      end
+    end
+
+    def destroy
+      if @topic.customer == @current_customer
+        @topic.destroy
+        redirect_to(topics_path, notice: '已删除成功。')
+      else
+        redirect_to(topics_path, notice: '您无法删除其他人的话题。')
       end
     end
 
