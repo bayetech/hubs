@@ -2,14 +2,14 @@
 <% if @topic.likers_count.to_i > 0 -%>
   <%= hub_topic_likers_heads_bar(@topic) -%>
 <% end -%>
-<% if @topic.replies_count.to_i > 0 -%>
-  <div class="topic-detail-replies">
+<div class="topic-detail-replies">
+  <% if @topic.replies_count.to_i > 0 -%>
     <% @topic.replies.each do |r| -%>
       <% next if r.new_record? -%>
       <%= render partial: 'hub/replies/reply', locals: {reply: r} %>
     <% end -%>
-  </div>
-<% end -%>
+  <% end -%>
+</div>
 <div class="hub_kong"></div>
 <% if @current_customer -%>
   <div class="topic-footer-bar">
