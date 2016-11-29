@@ -1,6 +1,6 @@
 @import 'normalize';
 
-@mixin hub-icons($image-url, $margin-top: .18rem) {
+@mixin hub-icons($image-url, $margin-top: .14rem) {
   background: image-url($image-url) no-repeat;
   background-position: 0 0;
   background-size: .64rem .58rem;
@@ -68,7 +68,7 @@ input[type="submit"] {
 }
 
 .gray-reply {
-  @include hub-icons('hubs/gray_comment.png', .24rem);
+  @include hub-icons('hubs/gray_comment.png', .18rem);
 }
 
 .gray-liker {
