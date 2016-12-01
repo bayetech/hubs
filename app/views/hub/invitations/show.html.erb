@@ -1,22 +1,23 @@
 <article>
   <header class="invitations-header">
-    <%= image_tag 'invitation/head.png', class: 'invitation_head' %>
+    <%= hub_avatar_tag @current_customer, no_link: true, style_class: 'invitation_head' -%>
     <p class="invitation_user">
-      <span class="user_name">MONK</span>
-      <!--男-->
-      <a class="user_sex_m" style="display: none">
-        <%= image_tag 'invitation/man.png' %>
-        <span>28</span>
-      </a>
-      <!--女-->
-      <a class="user_sex_w">
-        <%= image_tag 'invitation/woman.png' %>
-        <span>28</span>
-      </a>
+      <span class="user_name"><%= @current_customer.name -%></span>
+      <% if @current_customer.gender == '男' -%>
+        <a class="user_sex_m">
+          <%= image_tag 'invitation/man.png' %>
+          <span></span>
+        </a>
+      <% elsif @current_customer.gender == '女' -%>
+        <a class="user_sex_w">
+          <%= image_tag 'invitation/woman.png' %>
+          <span></span>
+        </a>
+      <% end -%>
     </p>
-    <p class="company_position">产品经理</p>
-    <p class="company_name">巴爷科技（上海）有限公司</p>
-    <p class="add_friend"><a>加为好友</a></p>
+    <p class="company_position"><%= @current_customer.title -%></p>
+    <p class="company_name"><%= @current_customer.company -%></p>
+    <p class="add_friend"><a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.bayekeji.dizhu">加为好友</a></p>
   </header>
   <section class="invitations-content">
     <p>生活中有更多可能</p>
@@ -27,6 +28,6 @@
     <%= image_tag 'invitation/baye_logo.png' %>
     <p>巴爷汇</p>
     <p>专业的社交平台</p>
-    <a class="invitations_download">立即下载</a>
+    <a class="invitations_download" href="http://a.app.qq.com/o/simple.jsp?pkgname=com.bayekeji.dizhu">立即下载</a>
   </footer>
 </article>
