@@ -1,6 +1,5 @@
 module Hub
   class PeopleController < Hub::BaseController
-    helper Hub::HubHelper
     before_action :set_person
 
     def show
