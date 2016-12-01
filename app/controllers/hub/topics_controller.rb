@@ -1,6 +1,5 @@
 module Hub
   class TopicsController < Hub::BaseController
-    helper Hub::HubHelper
     before_action :set_topic_title_current_customer, except: [:index]
 
     def index

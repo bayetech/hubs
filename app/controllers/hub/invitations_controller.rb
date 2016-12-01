@@ -1,5 +1,6 @@
 module Hub
   class InvitationsController < ActionController::Base
+    helper Hub::HubHelper
     layout 'invitation'
     before_action :set_current_customer
 
