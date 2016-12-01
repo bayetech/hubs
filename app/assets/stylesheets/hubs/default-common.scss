@@ -139,6 +139,9 @@ input[type="submit"] {
 
   a {
     color: $title-text-color;
+    p{
+      font-size: 0.64rem;
+    }
   }
 }
 
@@ -181,7 +184,7 @@ input[type="submit"] {
 
 .topic-reply {
   border-bottom: 1px solid $page-backgroud;
-  padding: .5rem 0 0 .4rem;
+  padding: .5rem .4rem 0 .4rem;
 }
 
 .topic-detail-replies {
@@ -193,31 +196,34 @@ input[type="submit"] {
     margin-top: .2rem;
     vertical-align: top;
     width: 1.2rem;
+    float: left;
   }
 
   .topic-reply-content {
-    display: inline-block;
-    width: 12.9rem;
+    display: block;
+    position: relative;
   }
 
   .topic-reply-name {
     color: $bold-text-color;
     font-size: .6rem;
     padding: .2rem ;
+    padding-left: 1.6rem;
   }
 
   .topic-reply-time {
     color: $category-text-color;
-    float: right;
     font-size: .48rem;
-    padding: .2rem .2rem .2rem .4rem;
-    position: relative;
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 
   .topic-reply-body {
     color: $title-text-color;
     font-size: .56rem;
-    padding: .2rem 0 .6rem .2rem;
+    padding: 0 0 .6rem .2rem;
+    padding-left: 1.6rem;
   }
 }
 
@@ -231,12 +237,14 @@ input[type="submit"] {
   position: fixed;
   width: 100%;
 }
+.new_reply{
 
+}
 .reply-bar {
   background-color: $topic-background;
   border: 1px solid $reply-bar-border;
   border-radius: 0.18rem;
-  margin: 2px;
+  width: 80%;
   padding: .1rem 0;
 
   img.emotion {
@@ -249,10 +257,9 @@ input[type="submit"] {
     border: 0;
     font-size: .56rem;
     outline: none;
-    padding: .1rem 0;
     vertical-align: top;
     border-radius: 0.18rem;
-    width: 10rem;
+    width: 64%;
     height: 1rem;
   }
 }
