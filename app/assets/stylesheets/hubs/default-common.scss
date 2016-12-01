@@ -54,16 +54,16 @@ img.emoji {
 
 input[type="submit"] {
   background-color: $primary-button-backgroud;
-  border: 1px solid $primary-button-backgroud;
   border-radius: 0.18rem;
   color: $primary-button-text;
-  float: right;
   font-size: .56rem;
   line-height: 1.15rem;
-  margin-right: .7rem;
-  margin-top: 0;
   padding: 0 .45rem;
   text-align: center;
+  position: absolute;
+  right: 1rem;
+  border: 0;
+  outline: none;
 }
 
 .hub-kong {
@@ -94,9 +94,6 @@ input[type="submit"] {
 .topic-content {
   background-color: $topic-background;
   border-bottom: 1px solid $page-backgroud;
-  display: flex;
-  flex: none;
-  flex-direction: column;
   padding: .6rem .4rem;
 }
 
@@ -155,7 +152,6 @@ input[type="submit"] {
 
   a {
     color: $praise-text-color;
-    outline: none;
   }
 }
 
