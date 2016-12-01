@@ -18,7 +18,7 @@
         <%= image_tag 'hubs/emotion.png', class: 'emotion' -%>
         <%= f.text_field :body, placeholder: '输入评论', autofocus: true %>
       </span>
-      <%= submit_tag '发送', id: 'btn_reply', data: { disable_with: '发送中' } -%>
+      <%= submit_tag '发送', id: 'btn_reply', data: { disable_with: '稍等' } -%>
       <%= f.hidden_field :reply_to_customer_id, value: '', id: :reply_to %>
     <% end -%>
   </div>
