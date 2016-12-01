@@ -6,13 +6,7 @@
     <meta name="viewport" content="target-densitydpi=device-dpi,width=750,user-scalable=no" />
     <title>LandlordCircle</title>
     <%= csrf_meta_tags %>
-<% if request.user_agent.include?(' OPPO ') -%>
-    <%= stylesheet_link_tag    'hubs/default-oppo', media: 'all', 'data-turbolinks-track': 'reload' %>
-<% elsif request.user_agent.include?(' SM-A9100 ') -%>
-    <%= stylesheet_link_tag    'hubs/default-large', media: 'all', 'data-turbolinks-track': 'reload' %>
-<% else -%>
     <%= stylesheet_link_tag    'hubs/default', media: 'all', 'data-turbolinks-track': 'reload' %>
-<% end -%>
     <%= javascript_include_tag 'hubs/hub', 'data-turbolinks-track': 'reload' %>
   </head>
 
