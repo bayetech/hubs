@@ -14,10 +14,10 @@
 
 @mixin hub-topic-image-style() {
   border-radius: .28rem;
-  margin-bottom: .3rem;
+  margin-bottom: .5rem;
 }
 
-$page-backgroud: #f3f3f3;
+$page-backgroud: #d8d8d8;
 $topic-background: #fff;
 $bold-text-color: #333;
 $head-text-color: #666;
@@ -54,14 +54,14 @@ img.emoji {
 input[type="submit"] {
   background-color: $primary-button-backgroud;
   border: 1px solid $primary-button-backgroud;
-  border-radius: 4px;
+  border-radius: 0.18rem;
   color: $primary-button-text;
   float: right;
-  font-size: .64rem;
-  line-height: 1.3rem;
+  font-size: .56rem;
+  line-height: 1.15rem;
   margin-right: .7rem;
-  margin-top: -.1rem;
-  padding: 0 .2rem;
+  margin-top: 0;
+  padding: 0 .45rem;
   text-align: center;
 }
 
@@ -70,15 +70,15 @@ input[type="submit"] {
 }
 
 .gray-reply {
-  @include hub-icons('hubs/gray_comment.png', .18rem);
+  @include hub-icons('hubs/gray_comment.png', 0);
 }
 
 .gray-liker {
-  @include hub-icons('hubs/gray_heart.png');
+  @include hub-icons('hubs/gray_heart.png', 0);
 }
 
 .red-liker {
-  @include hub-icons('hubs/red_heart.png');
+  @include hub-icons('hubs/red_heart.png', 0);
 }
 
 .bold-text {
@@ -87,11 +87,12 @@ input[type="submit"] {
 
 .light-text {
   color: $light-text-color;
+  font-size: 0.48rem;
 }
 
 .topic-content {
   background-color: $topic-background;
-  border-bottom: 4px solid $page-backgroud;
+  border-bottom: 1px solid $page-backgroud;
   display: flex;
   flex: none;
   flex-direction: column;
@@ -102,8 +103,8 @@ input[type="submit"] {
   font-size: .56rem;
 
   .topic-head-name {
-    color: $head-text-color;
-    font-size: .8rem;
+    color: $bold-text-color;
+    font-size: .64rem;
   }
 
   .topic-head-title {
@@ -121,7 +122,10 @@ input[type="submit"] {
   .topic-head-people {
     color: $head-text-color;
     display: inline-block;
-    margin: 0 .6rem;
+    margin: .2rem .6rem 0;
+    p:last-of-type{
+      padding-top: 0.3rem;
+    }
   }
 
   .topic-category {
@@ -132,8 +136,8 @@ input[type="submit"] {
 }
 
 .topic-title {
-  font-size: 13.5pt;
-  padding: .32rem .2rem;
+  font-size: 0.64rem;
+  padding: .5rem .2rem .5rem 0;
 
   a {
     color: $title-text-color;
@@ -156,12 +160,12 @@ input[type="submit"] {
 .topic-likers {
   background-color: $topic-background;
   border-bottom: 1px solid $page-backgroud;
-  padding: .2rem .6rem;
+  padding: .2rem .4rem;
 
   img {
     border-radius: 50%;
     height: 1.2rem;
-    margin-right: .2rem;
+    margin: .2rem .1rem .2rem 0;
     vertical-align: middle;
     width: 1.2rem;
   }
@@ -179,31 +183,29 @@ input[type="submit"] {
 
 .topic-reply {
   border-bottom: 1px solid $page-backgroud;
-  padding: 0 0 0 .8rem;
+  padding: .5rem 0 0 .4rem;
 }
 
 .topic-detail-replies {
   background-color: $topic-background;
-  padding: .2rem 0 0;
 
   img.head {
     border-radius: 50%;
     height: 1.2rem;
-    margin-top: .6rem;
+    margin-top: .2rem;
     vertical-align: top;
     width: 1.2rem;
   }
 
   .topic-reply-content {
     display: inline-block;
-    padding: 0 .2rem 0 0;
-    width: 12.2rem;
+    width: 12.9rem;
   }
 
   .topic-reply-name {
     color: $bold-text-color;
     font-size: .6rem;
-    padding: .2rem .2rem .2rem .4rem;
+    padding: .2rem ;
   }
 
   .topic-reply-time {
@@ -217,7 +219,7 @@ input[type="submit"] {
   .topic-reply-body {
     color: $title-text-color;
     font-size: .56rem;
-    padding: 0 0 .2rem .4rem;
+    padding: .2rem 0 .6rem .2rem;
   }
 }
 
@@ -235,23 +237,24 @@ input[type="submit"] {
 .reply-bar {
   background-color: $topic-background;
   border: 1px solid $reply-bar-border;
-  border-radius: 4px;
+  border-radius: 0.18rem;
   margin: 2px;
   padding: .1rem 0;
 
   img.emotion {
-    height: 1.04rem;
-    padding: .1rem .3rem;
+    height: 1rem;
+    padding: .1rem .2rem;
     vertical-align: top;
   }
 
   input {
     border: 0;
-    font-size: .76rem;
+    font-size: .56rem;
     outline: none;
     padding: .1rem 0;
-    top: .6rem;
     vertical-align: top;
-    width: 8.8rem;
+    border-radius: 0.18rem;
+    width: 10rem;
+    height: 1rem;
   }
 }
