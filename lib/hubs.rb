@@ -23,6 +23,12 @@ module Hub
         hubs/default-oppo.css
         hubs/emotion.png
         face/iconfont.png
+        invitation/head.png
+        invitation/invitation_bg.png
+        invitation/man.png
+        invitation/woman.png
+        invitation/baye_logo.png
+        invitation/circle-friends.png
         face/1.gif
         face/2.gif
         face/3.gif
