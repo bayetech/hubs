@@ -27,4 +27,5 @@ Hub::Engine.routes.draw do
       get :system
     end
   end
+  resource :invitation, only: :show
 end

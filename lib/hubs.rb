@@ -17,6 +17,7 @@ module Hub
     initializer 'hubs.assets.precompile', group: :all do |app|
       app.config.assets.precompile += %w(
         hubs/hub.js
+        hubs/invitation.css
         hubs/default.css
         hubs/default-large.css
         hubs/default-oppo.css
