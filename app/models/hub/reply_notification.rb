@@ -1,6 +1,10 @@
 module Hub
   class ReplyNotification < ActiveRecord::Base
-    establish_connection :bayehui
+    if defined? $db_bayehui
+      establish_connection $db_bayehui
+    else
+      establish_connection :bayehui
+    end
     belongs_to :reply, foreign_key: :hubs_reply_id
     belongs_to :topic, foreign_key: :hubs_topic_id
     belongs_to :to_customer, class_name: Customer, counter_cache: true

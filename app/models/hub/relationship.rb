@@ -1,6 +1,10 @@
 module Hub
   class Relationship < ActiveRecord::Base
-    establish_connection :bayehui
+    if defined? $db_bayehui
+      establish_connection $db_bayehui
+    else
+      establish_connection :bayehui
+    end
     belongs_to :follower_customer, class_name: Customer
     belongs_to :followed_customer, class_name: Customer
 

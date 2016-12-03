@@ -1,6 +1,10 @@
 module Hub
   class Liker < ActiveRecord::Base
-    establish_connection :bayehui
+    if defined? $db_bayehui
+      establish_connection $db_bayehui
+    else
+      establish_connection :bayehui
+    end
     include Hub::Uid
     belongs_to :customer
     belongs_to :topic, foreign_key: :hubs_topic_id, counter_cache: true
