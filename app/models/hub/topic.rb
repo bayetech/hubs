@@ -1,5 +1,6 @@
 module Hub
   class Topic < ActiveRecord::Base
+    establish_connection :bayehui
     include Hub::Uid
     include Hub::SoftDelete
 

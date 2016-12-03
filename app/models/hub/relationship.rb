@@ -1,5 +1,6 @@
 module Hub
   class Relationship < ActiveRecord::Base
+    establish_connection :bayehui
     belongs_to :follower_customer, class_name: Customer
     belongs_to :followed_customer, class_name: Customer
 
