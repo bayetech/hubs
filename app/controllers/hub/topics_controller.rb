@@ -3,12 +3,7 @@ module Hub
     before_action :set_topic_title_current_customer, except: [:index]
 
     def index
-      customer = helpers.hub_current_customer
-      if customer.present?
-        @topics = customer.feed.limit 20
-      else
-        @topics = Topic.page_includes.recent.show_in_recent.limit 20
-      end
+      @topics = Topic.page_includes.recent.limit 20
       @refresh_heads_bar = false
     end
 
