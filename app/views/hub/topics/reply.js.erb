@@ -1,7 +1,7 @@
 <% if @reply.valid? -%>
   $(".topic-detail-replies").append("<%= j render partial: 'hub/replies/reply', locals: { reply: @reply } -%>");
-  $('#new_reply textarea').val("");
+  $('#new_reply input').val("");
 <% else -%>
-  $('#new_reply textarea').val("<%= @reply.corrected_body_content -%>");
+  $('#new_reply input').val("<%= @reply.corrected_body_content -%>");
 <% end -%>
 $(window).scrollTop($(document).height());
