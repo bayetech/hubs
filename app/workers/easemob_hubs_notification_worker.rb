@@ -2,8 +2,8 @@ class EasemobHubsNotificationWorker
   include Sidekiq::Worker
 
   def perform(params)
-    to_customer = Customer.find(params[:to_customer_id])
-    from_customer = Customer.find(params[:from_customer_id])
+    to_customer = Customer.find(params['to_customer_id'])
+    from_customer = Customer.find(params['from_customer_id'])
 
     ext_message = { liker_notifications_count: to_customer.liker_notifications_count,
                     reply_notifications_count: to_customer.reply_notifications_count,
