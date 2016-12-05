@@ -20,18 +20,20 @@
   <% if topic.topic_images_count.to_i > 4 -%>
     <div class="topic-image-9">
       <% topic.images.each do |ti| -%>
-        <%= image_tag ti.image.url(thumb: '@!t9') -%>
+        <%= hub_app_display_topics_link ti.image, topic.images, '@!t9', iphone_ipad_app_request? -%>
       <% end %>
     </div>
   <% elsif topic.topic_images_count.to_i > 1 -%>
     <div class="topic-image-4">
       <% topic.images.each do |ti| -%>
-        <%= image_tag ti.image.url(thumb: '@!t4') -%>
+        <%= hub_app_display_topics_link ti.image, topic.images, '@!t4', iphone_ipad_app_request? -%>
       <% end %>
     </div>
   <% else -%>
     <div class="topic-image-1">
-      <%= image_tag topic.images.first.image.url(thumb: '@!t1') unless topic.images.blank? %>
+      <% topic.images.each do |ti| -%>
+        <%= hub_app_display_topics_link topic.images.first.image, topic.images, '@!t1', iphone_ipad_app_request? -%>
+      <% end %>
     </div>
   <% end -%>
   <div class="topic-footer">

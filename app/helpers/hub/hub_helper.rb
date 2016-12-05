@@ -64,5 +64,21 @@ module Hub
         end
       end
     end
+
+    def hub_app_display_topics_link(image, images, thumb, in_ios)
+      topics_hash = {
+        current_image: image.url(thumb: '@!slim'),
+        images: images.collect { |ti| ti.image.url(thumb: '@!slim') }
+      }
+      if in_ios
+        link_to '#', onclick: "window.webkit.messageHandlers.DisplayPicture.postMessage(#{topics_hash.to_json}); return false;" do
+          image_tag image.url(thumb: thumb)
+        end
+      else
+        link_to '#', onclick: "MyJavascriptInterface.displayPicture('#{topics_hash.to_json}'); return false;" do
+          image_tag image.url(thumb: thumb)
+        end
+      end
+    end
   end
 end
