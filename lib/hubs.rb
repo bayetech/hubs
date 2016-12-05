@@ -112,8 +112,9 @@ module Hub
     require_relative '../app/models/concerns/hub/soft_delete'
     require_relative '../app/models/concerns/hub/uid'
     require_relative '../app/models/concerns/hub/user_relation'
-
     require_relative '../app/uploaders/hub/topic_image_uploader'
+
+    require_relative '../app/workers/easemob_hubs_notification_worker'
 
     cf = File.dirname(__FILE__)
 
