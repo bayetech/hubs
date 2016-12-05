@@ -19,14 +19,17 @@
   flex-flow: row wrap;
   flex-wrap: wrap;
 
-  img {
-    @include hub-topic-image-style();
-    height: 6rem;
-    width: 6rem;
+  a {
     margin-right: .5rem;
+
+    img {
+      @include hub-topic-image-style();
+      height: 6rem;
+      width: 6rem;
+    }
   }
 
-  img:nth-child(2n) {
+  a:nth-child(2n) {
     margin-right: 0;
   }
 }
@@ -37,13 +40,17 @@
   flex-flow: row wrap;
   flex-wrap: wrap;
 
-  img {
-    @include hub-topic-image-style();
-    height: 3.8rem;
-    width: 3.8rem;
+  a {
     margin-right: .5rem;
+
+    img {
+      @include hub-topic-image-style();
+      height: 3.8rem;
+      width: 3.8rem;
+    }
   }
-  img:nth-child(3n) {
+
+  a:nth-child(3n) {
     margin-right: 0;
   }
 }
