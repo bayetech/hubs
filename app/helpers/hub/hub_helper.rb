@@ -65,9 +65,9 @@ module Hub
       end
     end
 
-    def hub_app_display_topics_link(image, images, thumb, in_ios)
+    def hub_app_display_topics_link(image, images, current_position, thumb, in_ios)
       topics_hash = {
-        current_image: image.url(thumb: '@!slim'),
+        current_position: current_position,
         images: images.collect { |ti| ti.image.url(thumb: '@!slim') }
       }
       if in_ios
