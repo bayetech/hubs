@@ -1,11 +1,5 @@
 module Hub
   module RequestHelper
-    def wechat_request?
-      request.user_agent.downcase.match(/micromessenger/)
-    rescue
-      false
-    end
-
     def android_browser_request?
       ua = request.user_agent.downcase
       ua.match(/android/) && !ua.start_with?('dalvik')
