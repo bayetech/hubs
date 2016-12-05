@@ -13,5 +13,13 @@ class EasemobHubsNotificationWorker
 
     res = Easemob.command_to(to_customer.uid, target_type: :users, action: :hubs_notification,
                    from: from_customer.uid, ext: ext_message)
+
+    if res.all_success?
+      to_customer.update(liker_notifications_count: 0,
+                         reply_notifications_count: 0,
+                         follower_notifications_count: 0,
+                         notifications_count: 0
+                        )
+    end
   end
 end
