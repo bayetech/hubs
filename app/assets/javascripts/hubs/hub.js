@@ -36,7 +36,7 @@ function adaptFun(designPercent){
 $(document).ready(function() {
   adaptFun(750/50);
 
-  $('#reply_body').on('focus',function(event){
+  $('#reply-input').on('focus',function(event){
     //自动反弹 输入法高度自适应
     var target = this;
     setTimeout(function(){
