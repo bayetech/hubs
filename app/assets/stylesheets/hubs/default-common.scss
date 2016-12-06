@@ -32,7 +32,7 @@ $primary-button-backgroud: #18b091;
 $primary-button-text: #fff;
 
 body {
-  -webkit-tap-highlight-color:rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   background-color: $page-backgroud;
   margin: 0;
   padding: 0;
@@ -54,16 +54,16 @@ img.emoji {
 
 input[type="submit"] {
   background-color: $primary-button-backgroud;
-  border-radius: 0.18rem;
+  border: 0;
+  border-radius: .18rem;
   color: $primary-button-text;
   font-size: .56rem;
   line-height: 1.15rem;
+  outline: none;
   padding: 0 .45rem;
-  text-align: center;
   position: absolute;
   right: 1rem;
-  border: 0;
-  outline: none;
+  text-align: center;
 }
 
 .hub-kong {
@@ -88,7 +88,7 @@ input[type="submit"] {
 
 .light-text {
   color: $light-text-color;
-  font-size: 0.48rem;
+  font-size: .48rem;
 }
 
 .topic-content {
@@ -121,8 +121,9 @@ input[type="submit"] {
     color: $head-text-color;
     display: inline-block;
     margin: .2rem 0 0 .3rem;
-    p:last-of-type{
-      padding-top: 0.3rem;
+
+    p:last-of-type {
+      padding-top: .3rem;
     }
   }
 
@@ -134,13 +135,14 @@ input[type="submit"] {
 }
 
 .topic-title {
-  font-size: 0.64rem;
+  font-size: .64rem;
   padding: .5rem .2rem .5rem 0;
 
   a {
     color: $title-text-color;
-    p{
-      font-size: 0.64rem;
+
+    p {
+      font-size: .64rem;
     }
   }
 }
@@ -184,7 +186,7 @@ input[type="submit"] {
 
 .topic-reply {
   border-bottom: 1px solid $page-backgroud;
-  padding: .5rem .4rem 0 .4rem;
+  padding: .5rem .4rem 0;
 }
 
 .topic-detail-replies {
@@ -192,11 +194,11 @@ input[type="submit"] {
 
   img.head {
     border-radius: 50%;
+    float: left;
     height: 1.2rem;
     margin-top: .2rem;
     vertical-align: top;
     width: 1.2rem;
-    float: left;
   }
 
   .topic-reply-content {
@@ -207,7 +209,7 @@ input[type="submit"] {
   .topic-reply-name {
     color: $bold-text-color;
     font-size: .6rem;
-    padding: .2rem ;
+    padding: .2rem;
     padding-left: 1.6rem;
   }
 
@@ -215,8 +217,8 @@ input[type="submit"] {
     color: $category-text-color;
     font-size: .48rem;
     position: absolute;
-    top: 0;
     right: 0;
+    top: 0;
   }
 
   .topic-reply-body {
@@ -241,9 +243,9 @@ input[type="submit"] {
 .reply-bar {
   background-color: $topic-background;
   border: 1px solid $reply-bar-border;
-  border-radius: 0.18rem;
-  width: 80%;
+  border-radius: .18rem;
   padding: .1rem 0;
+  width: 80%;
 
   img.emotion {
     height: 1rem;
@@ -253,11 +255,11 @@ input[type="submit"] {
 
   input {
     border: 0;
+    border-radius: .18rem;
     font-size: .56rem;
+    height: 1rem;
     outline: none;
     vertical-align: top;
-    border-radius: 0.18rem;
     width: 64%;
-    height: 1rem;
   }
 }
