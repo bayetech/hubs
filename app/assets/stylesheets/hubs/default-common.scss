@@ -163,7 +163,6 @@ input[type="submit"] {
 .topic-likers {
   background-color: $topic-background;
   border-bottom: 1px solid $page-backgroud;
-  padding: .2rem .4rem;
 
   img {
     border-radius: 50%;
@@ -171,6 +170,10 @@ input[type="submit"] {
     margin: .2rem .1rem .2rem 0;
     vertical-align: middle;
     width: 1.2rem;
+  }
+
+  a:first-child {
+    margin-left: .4rem;
   }
 }
 
