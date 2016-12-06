@@ -1,1 +1,9 @@
 <%= render partial: 'hub/topics/topic_common', locals: { topic: topic } -%>
+<% if topic.replies_count.to_i > 0 -%>
+  <div class="topic-replies">
+    <% topic.replies.each do |r| -%>
+      <% next if r.new_record? -%>
+      <p><%= r.customer.name -%>：<%= sanitize hub_deal_with_emoji(r.body).html_safe -%></p>
+    <% end -%>
+  </div>
+<% end -%>
