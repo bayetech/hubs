@@ -13,7 +13,7 @@
     <%= form_for @reply, as: :reply, url: reply_topic_path(id: @topic.uid), remote: true do |f| %>
       <span class="reply-bar">
         <%= image_tag 'hubs/emotion.png', class: 'emotion' -%>
-        <%= f.text_field :body, placeholder: '输入评论', autofocus: true %>
+        <%= f.text_field :body, placeholder: '输入评论' %>
       </span>
       <%= submit_tag '发送', id: 'btn_reply', data: { disable_with: '稍等' } -%>
       <%= f.hidden_field :reply_to_customer_id, value: '', id: :reply_to %>
