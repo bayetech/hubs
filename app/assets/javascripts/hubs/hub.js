@@ -35,12 +35,8 @@ function adaptFun(designPercent){
 
 $(document).on('turbolinks:load', function() {
   $('#reply-input').on('focus',function(event){
+    $('.hub-kong').remove();
     $('.topic-footer-bar').parent().append("<div class='hub-kong-end'></div>");
-    //自动反弹 输入法高度自适应
-    var target = this;
-    setTimeout(function(){
-        target.scrollIntoViewIfNeeded();
-    }, 100);
   });
 })
 
