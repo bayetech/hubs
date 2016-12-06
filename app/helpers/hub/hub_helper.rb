@@ -58,7 +58,7 @@ module Hub
     end
 
     def hub_topic_likers_heads_bar(topic)
-      content_tag(:div, class: 'topic-likers') do
+      content_tag(:div, class: "t_#{topic.uid}-likers topic-likers") do
         topic.likers.limit(9).each do |l|
           concat hub_avatar_tag(l.customer)
         end
