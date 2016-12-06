@@ -70,6 +70,10 @@ input[type="submit"] {
   margin: 2.2rem 0;
 }
 
+.hub-kong-end {
+  margin: 12.2rem 0;
+}
+
 .gray-reply {
   @include hub-icons('hubs/gray_comment.png', 0);
 }
@@ -235,11 +239,9 @@ input[type="submit"] {
 .topic-footer-bar {
   background-color: $bottom-backgroud;
   border: 1px solid $bottom-border-color;
-  bottom: 0;
   height: 1.26rem;
   line-height: 1.2rem;
   padding: .35rem;
-  position: fixed;
   width: 100%;
 }
 
