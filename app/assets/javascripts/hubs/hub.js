@@ -33,9 +33,7 @@ function adaptFun(designPercent){
   }
 }
 
-$(document).ready(function() {
-  adaptFun(750/50);
-
+$(document).on('turbolinks:load', function() {
   $('#reply-input').on('focus',function(event){
     //自动反弹 输入法高度自适应
     var target = this;
@@ -43,4 +41,8 @@ $(document).ready(function() {
         target.scrollIntoViewIfNeeded();
     }, 100);
   });
+})
+
+$(document).ready(function() {
+  adaptFun(750/50);
 });
