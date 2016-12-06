@@ -1,2 +1,2 @@
-$('.t_<%= @topic.uid -%>').replaceWith('<%= j hub_liker_praise_link(@current_customer, @topic, refresh_heads_bar: true) -%>');
+$('.t_<%= @topic.uid -%>').replaceWith('<%= j hub_liker_praise_link(@current_customer, @topic) -%>');
 $('.t_<%= @topic.uid -%>-likers').replaceWith('<%= j hub_topic_likers_heads_bar(@topic) %>');

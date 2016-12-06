@@ -5,14 +5,12 @@ module Hub
     def index
       @current_customer = helpers.hub_current_customer
       @topics = Topic.page_includes.recent.limit 20
-      @refresh_heads_bar = false
     end
 
     def show
       return redirect_to topics_path unless @topic.present?
       @replies = @topic.replies.includes(:customer)
       @reply = @replies.build
-      @refresh_heads_bar = true
     end
 
     def reply

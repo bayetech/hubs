@@ -1,4 +1,4 @@
-<%= render partial: 'topic_common', locals: { topic: @topic, refresh_heads_bar: @refresh_heads_bar } -%>
+<%= render partial: 'topic_common', locals: { topic: @topic } -%>
 <div class="topic-detail-replies">
   <% if @topic.replies_count.to_i > 0 -%>
     <% @topic.replies.each do |r| -%>
