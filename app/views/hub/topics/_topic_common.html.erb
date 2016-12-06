@@ -49,6 +49,4 @@
     <%= hub_liker_praise_link(hub_current_customer, topic) %>
   </div>
 </div>
-<% if topic.likers_count.to_i > 0 -%>
-  <%= hub_topic_likers_heads_bar(topic) -%>
-<% end -%>
+<%= hub_topic_likers_heads_bar(topic) -%>
