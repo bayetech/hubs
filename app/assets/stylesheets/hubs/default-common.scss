@@ -17,7 +17,7 @@
   margin-bottom: .5rem;
 }
 
-$page-backgroud: #d8d8d8;
+$page-backgroud: #e3e3e3;
 $topic-background: #fff;
 $bold-text-color: #333;
 $head-text-color: #666;
@@ -97,8 +97,12 @@ input[type="submit"] {
 
 .topic-content {
   background-color: $topic-background;
-  border-bottom: 1px solid $page-backgroud;
+  border-top: 6px solid $page-backgroud;
   padding: .6rem .4rem;
+}
+
+.topic-content:first-child {
+  border-top: 0;
 }
 
 .topic-head {
