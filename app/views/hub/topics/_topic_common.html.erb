@@ -14,7 +14,7 @@
   </div>
   <div class="topic-title">
     <%= link_to topic_path(id: topic.uid), class: 'flex-large-item' do -%>
-      <p><%= sanitize hub_deal_with_emoji(topic.title).html_safe -%></p>
+      <h5 class="flex-large-item-text"><%= sanitize hub_deal_with_emoji(topic.title).html_safe -%></h5>
     <% end -%>
   </div>
   <% if topic.topic_images_count.to_i > 4 -%>
