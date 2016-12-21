@@ -25,9 +25,9 @@ Gem::Specification.new do |spec|
   spec.cert_chain  = ['certs/Eric-Guo.pem']
   spec.signing_key = File.expand_path('~/.ssh/gem-private_key.pem') if $PROGRAM_NAME.end_with?('gem')
 
-  spec.add_runtime_dependency 'activerecord', '>= 4.2.7', '< 5.1.x'
+  spec.add_runtime_dependency 'activerecord', '>= 5.0.0', '< 5.1.x'
   spec.add_runtime_dependency 'easemob', '~> 0.3.0'
-  spec.add_runtime_dependency 'sidekiq', '~> 4.2.0'
+  spec.add_runtime_dependency 'sidekiq', '~> 4.2.7'
   spec.add_runtime_dependency 'autoprefixer-rails', '~> 6.5.3'
   spec.add_runtime_dependency 'carrierwave', '~> 0.11.2'
   spec.add_runtime_dependency 'jquery-rails', '~> 4.2.1'
