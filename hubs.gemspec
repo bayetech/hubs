@@ -28,7 +28,7 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'activerecord', '>= 5.0.0', '< 5.1.x'
   spec.add_runtime_dependency 'easemob', '~> 0.3.0'
   spec.add_runtime_dependency 'sidekiq', '~> 4.2.7'
-  spec.add_runtime_dependency 'autoprefixer-rails', '~> 6.5.3'
+  spec.add_runtime_dependency 'autoprefixer-rails', '~> 6.6.0'
   spec.add_runtime_dependency 'carrierwave', '~> 0.11.2'
   spec.add_runtime_dependency 'jquery-rails', '~> 4.2.1'
   spec.add_runtime_dependency 'gemojione', '~> 3.2.0'
