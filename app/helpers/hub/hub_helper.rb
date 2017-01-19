@@ -10,7 +10,7 @@ module Hub
     end
 
     def hub_avatar_tag(customer, no_link: false, style_class: nil)
-      raw_image_url = customer.avatar.try(:url, thumb: '?x-oss-process=image/resize,m_mfit,h_100,w_100')
+      raw_image_url = customer.try(:avatar).try(:url, thumb: '?x-oss-process=image/resize,m_mfit,h_100,w_100')
       if raw_image_url.blank?
         wechat_user = customer.wechat_users.first
         raw_image_url = wechat_user.avatar.try(:url, thumb: '?x-oss-process=image/resize,m_mfit,h_100,w_100') if wechat_user.present?
