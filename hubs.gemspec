@@ -27,14 +27,14 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency 'activerecord', '>= 5.0.0', '< 5.1.x'
   spec.add_runtime_dependency 'easemob', '~> 0.3.0'
-  spec.add_runtime_dependency 'sidekiq', '~> 4.2.7'
-  spec.add_runtime_dependency 'autoprefixer-rails', '~> 6.7.0'
+  spec.add_runtime_dependency 'sidekiq', '~> 4.2.10'
+  spec.add_runtime_dependency 'autoprefixer-rails', '~> 6.7.7'
   spec.add_runtime_dependency 'carrierwave', '~> 1.0.0'
-  spec.add_runtime_dependency 'jquery-rails', '~> 4.2.1'
+  spec.add_runtime_dependency 'jquery-rails', '~> 4.3.1'
   spec.add_runtime_dependency 'gemojione', '~> 3.2.0'
   spec.add_runtime_dependency 'normalize-scss', '~> 6.0.0'
   spec.add_runtime_dependency 'turbolinks', '~> 5.0.1'
-  spec.add_development_dependency 'bundler', '~> 1.13'
+  spec.add_development_dependency 'bundler', '~> 1.14'
   spec.add_development_dependency 'rake'
   spec.add_development_dependency 'rspec', '~> 3.0'
 end
