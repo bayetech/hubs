@@ -31,6 +31,8 @@ Or install it yourself as:
 rails g hub:install
 ```
 
+it will mount the hub to routes and add hubs.rb in initializers folder.
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
