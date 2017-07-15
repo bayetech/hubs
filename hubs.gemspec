@@ -31,7 +31,7 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'autoprefixer-rails', '~> 7.1.1'
   spec.add_runtime_dependency 'carrierwave', '~> 1.0'
   spec.add_runtime_dependency 'jquery-rails', '~> 4.3.1'
-  spec.add_runtime_dependency 'gemojione', '~> 3.2.0'
+  spec.add_runtime_dependency 'gemojione', '~> 3.3.0'
   spec.add_runtime_dependency 'normalize-scss', '~> 7.0.0'
   spec.add_runtime_dependency 'turbolinks', '~> 5.0.1'
   spec.add_development_dependency 'bundler', '~> 1.14'
